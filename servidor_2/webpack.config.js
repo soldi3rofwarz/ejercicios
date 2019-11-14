@@ -1,6 +1,11 @@
-const MiniCssExtractPlugin =require('mini-css-extract-plugin');
 const path = require('path');
+const MiniCssExtractPlugin =require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const dotenv = require('dotenv');
+const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin'); 
 
 module.exports={
     entry: './src/frontend/index.js',

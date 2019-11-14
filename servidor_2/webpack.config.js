@@ -1,16 +1,64 @@
-const MiniCssExtractPlugin =require('mini-css-extract-plugin');
 const path = require('path');
+const MiniCssExtractPlugin =require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const dotenv = require('dotenv');
+const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin'); 
 
 module.exports={
     entry: './src/frontend/index.js',
+
+    devtool: isProduction
+            ? 'hidden-source-map'
+            : 'cheap-source-map',
+    mode: process.env.NODE_ENV,
+   
     output:{
-        path:path.resolve(__dirname,'app_compilada'),
-        filemane:'bundle.js',
+        path:isProduction
+            ? path.join(process.cwd(),'./src/server/public')
+            : '/',
+        
+        filemane: 'assets/app.js',
+        publicPath: '/',
+        //path:path.resolve(__dirname,'app_compilada'),
+        //filemane:'bundle.js',
     },
     resolve:{
         extensions:['.js','.jsx']
     },
+
+    optimization:{
+        splitChunks:{
+            chunks: 'async',
+            name: true,
+            cacheGroups: {
+                vendors: {
+                    name: 'vendors',
+                    chunks: 'all',
+                    reuseExistingChunk: true,
+                    priority: 1,
+                    filemane: 'assets/vendor.js',
+                    enforce: true,
+                    test(module,chunks){
+                        const name = module.nameForCondition
+                            && module.nameForCondition();
+                        return chunks.some(
+                            (chunks) => {
+                                return chunks.name !== 'vendor' &&
+                                    /[\\/]node_modules[\\/]/.test(name)
+                            }
+                        );
+                    },
+                },
+            },
+        },
+        minimize: isProduction ? true: false,
+        minimizer: isProduction ? [new TerserPlugin()]: [],
+    },
+
+    
     module:{
             rules:[{
                 test: /\.(js|jsx)$/,
@@ -32,6 +80,7 @@ module.exports={
                         loader: MiniCssExtractPlugin.loader
                     },
                     'css-loader',
+                    'postcss-loader',
                     {
                         loader: 'sass-loader',
                     },
@@ -52,14 +101,35 @@ module.exports={
             },
         ],
     },
+    devServer: {
+        historyApiFallback: true,
+        inline:false,
+    },
     plugins:[
-        new HtmlWebpackPlugin({
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer(),
+                ],
+            },
+        }),
+
+        /* new HtmlWebpackPlugin({
             template:'./public/index.html',
             filename:'./index.html',
-        }),
+        }), */
 
         new MiniCssExtractPlugin({
             filename:'assets/app.css',
         }),
+
+        isProduction ? new CompressionPlugin({
+            test: /\.js$|\.css$/,
+            filemane: '[path].gz',
+        }): () => {},
     ],
+ 
 };
+dotenv.config();
+const isProduction = (porcess.env.NODE_ENV==='production');

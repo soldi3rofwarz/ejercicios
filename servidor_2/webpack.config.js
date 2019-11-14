@@ -9,12 +9,51 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports={
     entry: './src/frontend/index.js',
+
+    devtool: isProduction
+            ? 'hidden-source-map'
+            : 'cheap-source-map',
+    mode: process.env.NODE_ENV,
+   
     output:{
-        path:path.resolve(__dirname,'app_compilada'),
-        filemane:'bundle.js',
+        path:isProduction
+            ? path.join(process.cwd(),'./src/server/public')
+            : '/',
+        
+        filemane: 'assets/app.js',
+        publicPath: '/',
+        //path:path.resolve(__dirname,'app_compilada'),
+        //filemane:'bundle.js',
     },
     resolve:{
         extensions:['.js','.jsx']
+    },
+
+    optimization:{
+        splitChunks:{
+            chunks: 'async',
+            name: true,
+            cacheGroups: {
+                vendors: {
+                    name: 'vendors',
+                    chunks: 'all',
+                    reuseExistingChunk: true,
+                    priority: 1,
+                    filemane: 'assets/vendor.js',
+                    enforce: true,
+                    test(module,chunks){
+                        const name = module.nameForCondition
+                            && module.nameForCondition();
+                        return chunks.some(
+                            (chunks) => {
+                                return chunks.name !== 'vendor' &&
+                                    /[\\/]node_modules[\\/]/.test(name)
+                            }
+                        );
+                    },
+                },
+            },
+        },
     },
     module:{
             rules:[{
@@ -67,4 +106,7 @@ module.exports={
             filename:'assets/app.css',
         }),
     ],
+ 
 };
+dotenv.config();
+const isProduction = (porcess.env.NODE_ENV==='production');

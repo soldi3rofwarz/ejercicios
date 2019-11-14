@@ -54,7 +54,11 @@ module.exports={
                 },
             },
         },
+        minimize: isProduction ? true: false,
+        minimizer: isProduction ? [new TerserPlugin()]: [],
     },
+
+    
     module:{
             rules:[{
                 test: /\.(js|jsx)$/,
@@ -76,6 +80,7 @@ module.exports={
                         loader: MiniCssExtractPlugin.loader
                     },
                     'css-loader',
+                    'postcss-loader',
                     {
                         loader: 'sass-loader',
                     },
@@ -96,15 +101,33 @@ module.exports={
             },
         ],
     },
+    devServer: {
+        historyApiFallback: true,
+        inline:false,
+    },
     plugins:[
-        new HtmlWebpackPlugin({
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer(),
+                ],
+            },
+        }),
+
+        /* new HtmlWebpackPlugin({
             template:'./public/index.html',
             filename:'./index.html',
-        }),
+        }), */
 
         new MiniCssExtractPlugin({
             filename:'assets/app.css',
         }),
+
+        isProduction ? new CompressionPlugin({
+            test: /\.js$|\.css$/,
+            filemane: '[path].gz',
+        }): () => {},
     ],
  
 };

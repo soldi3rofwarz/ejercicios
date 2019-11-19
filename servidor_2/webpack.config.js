@@ -20,10 +20,10 @@ module.exports={
             ? path.join(process.cwd(),'./src/server/public')
             : '/',
         
-        filemane: 'assets/app.js',
+        filename: 'assets/app.js',
         publicPath: '/',
         //path:path.resolve(__dirname,'app_compilada'),
-        //filemane:'bundle.js',
+        //filename:'bundle.js',
     },
     resolve:{
         extensions:['.js','.jsx']
@@ -39,7 +39,7 @@ module.exports={
                     chunks: 'all',
                     reuseExistingChunk: true,
                     priority: 1,
-                    filemane: 'assets/vendor.js',
+                    filename: 'assets/vendor.js',
                     enforce: true,
                     test(module,chunks){
                         const name = module.nameForCondition
@@ -126,10 +126,10 @@ module.exports={
 
         isProduction ? new CompressionPlugin({
             test: /\.js$|\.css$/,
-            filemane: '[path].gz',
+            filename: '[path].gz',
         }): () => {},
     ],
  
 };
 dotenv.config();
-const isProduction = (porcess.env.NODE_ENV==='production');
+const isProduction = (process.env.NODE_ENV==='production');

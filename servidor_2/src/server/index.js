@@ -2,7 +2,7 @@ require('ignore-styles');
 
 require('@babel/register')({
     ignore: [/(node_modules)/],
-    presets: ['@babel/presets-env', '@babel/presets-react'],
+    presets: ['@babel/preset-env', '@babel/preset-react'],
 });
 
 require('asset-require-hook')({

@@ -14,9 +14,10 @@ const app = express();
 app.use(express.static(`${__dirname}/public`));
 
 if (ENV === 'development'){
-    Console.log('Loading dev config');
+    console.log('Loading dev config');
     const webpackConfig = require ('./../../webpack.config');
-    const webpackDevMiddleware = require ('webpack-hot-middleware');
+    const webpackDevMiddleware= require('webpack-dev-middleware');
+    const webpackHotMiddleware = require ('webpack-hot-middleware');
     const compiler = webpack(webpackConfig);
     const serverConfig = {
         contentBase: `http://localhost:${PORT}`,

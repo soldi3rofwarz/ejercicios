@@ -6,13 +6,12 @@ require('@babel/register')({
 });
 
 require('asset-require-hook')({
-
     extensions: [
         'jpg',
         'png',
         'gif',
     ],
-    name: '/aseets/resources/[name].[ext]',
+    name: '/assets/resources/[name].[ext]',
 });
 
 require('./server.js');

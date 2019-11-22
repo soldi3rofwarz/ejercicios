@@ -12,7 +12,7 @@ require('asset-require-hook')({
         'png',
         'gif',
     ],
-    name: '/aseets/resources/[name].[ext]',
+    name: '/assets/resources/[name].[ext]',
 });
 
 require('./server.js');

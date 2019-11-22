@@ -1,19 +1,18 @@
 const path = require('path');
 const MiniCssExtractPlugin =require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const dotenv = require('dotenv');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin'); 
 
-module.exports={
+module.exports = {
     entry: './src/frontend/index.js',
 
     devtool: isProduction
             ? 'hidden-source-map'
             : 'cheap-source-map',
-    mode: process.env.NODE_ENV,
+    mode: process.env.NODE_ENV, 
    
     output:{
         path:isProduction
@@ -46,14 +45,15 @@ module.exports={
                             && module.nameForCondition();
                         return chunks.some(
                             (chunks) => {
-                                return chunks.name !== 'vendor' &&
+                                return (
+                                    chunks.name !== 'vendor' &&
                                     /[\\/]node_modules[\\/]/.test(name)
-                            }
+                                );
+                             }
                         );
                     },
                 },
             },
-        },
         minimize: isProduction ? true: false,
         minimizer: isProduction ? [new TerserPlugin()]: [],
     },

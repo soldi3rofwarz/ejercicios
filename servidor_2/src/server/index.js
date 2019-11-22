@@ -6,7 +6,6 @@ require('@babel/register')({
 });
 
 require('asset-require-hook')({
-
     extensions: [
         'jpg',
         'png',

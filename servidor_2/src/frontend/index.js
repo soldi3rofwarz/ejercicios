@@ -1,20 +1,29 @@
-import react from 'react';
-import ReactDom from 'react-dom';
-//import Perfil from './perfil/contenedores/perfil-container';
-//import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
+import AppRoutes from './routes/app-routes';
+import './index.css';
+
 const App = () => {
     React.useEffect(() => {
         const jssStyles = document.getElementById('jss-server-side');
-        if(jssStyles){
+        if(jssStyles) {
             jssStyles.parentElement.removeChild(jssStyles);
         }
     }, []);
     return (
-        <perfil/>
+        <AppRoutes />
     );
 }
 
-ReactDOM.hydrate(<App />, document.getElementById('app'));
+const history = createBrowserHistory();
+
+ReactDOM.hydrate(
+    <Router history={history}>
+        <App />
+    </Router>
+, document.getElementById('app'));
 
 
 

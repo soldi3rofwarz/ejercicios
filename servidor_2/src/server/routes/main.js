@@ -1,23 +1,35 @@
 import React from 'react';
 import {
     renderToString,
-}  from 'react-dom/server';
+} from 'react-dom/server';
 import render from '../render';
-//import Perfil from './../../frontend/perfil/contenedores/perfil-container';
-//import { ServerStyleSheets} from '@material-ui/core/styles';
+import { StaticRouter } from 'react-router-dom';
+import serverRoutes from './../../frontend/routes/server-routes';
+import { renderRoutes } from 'react-router-config';
+import { ServerStyleSheets } from '@material-ui/core/styles';
 
 const main = (req, res, next) => {
     try {
-        /* const sheets = new ServerStyleSheets();
+        const sheets = new ServerStyleSheets();
+
+        const context = {};
+        
         const html = renderToString(
             sheets.collect(
-                //<Perfil />
+                <StaticRouter
+                    location={req.url}
+                    context={context}
+                >
+                    {renderRoutes(serverRoutes)}
+                </StaticRouter>
             )
         );
-        const ccssString = sheets.toString();
-        res.send(render(html,cssString)); */
+
+        const cssString = sheets.toString();
+
+        res.send(render(html, cssString));
     }
-    catch(e){
+    catch(e) {
         next(e);
     }
 };

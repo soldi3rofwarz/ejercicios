@@ -5,19 +5,16 @@ import {
   Route,
 } from "react-router-dom";
 
+import Home from './../tema/home/componentes/body.js';
 //importar las rutas de las vista que se podran cargar desde el servidor//
 //luego se deben agregar las rutas ne la parte de route//
-
-import NotFound404 from './../404/componentes/404';
 
 const AppRoutes = () => {
 
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path='/' component={} /> 
-                <Route exact path= '' component={} />
-                <Route component={NotFound404} />
+                <Route exact path='/' component={Home} />
             </Switch>
         </BrowserRouter>
     );

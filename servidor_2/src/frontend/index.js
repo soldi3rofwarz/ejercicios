@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import AppRoutes from './routes/app-routes';
-import './index.css';
+
 
 const App = () => {
     React.useEffect(() => {

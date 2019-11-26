@@ -1,32 +1,32 @@
 import React from 'react';
-import fb from './../../assets/fb.png';
-import ig from './../../assets/ig.png';
-import twitter from './../../assets/twitter.png';
+import { makeStyles } from '@material-ui/core/styles';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import FolderIcon from '@material-ui/icons/Folder';
+import RestoreIcon from '@material-ui/icons/Restore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
+const useStyles = makeStyles({
+  root: {
+    width: 500,
+  },
+});
 
-const Pie = () => {
-    return (
-        <footer className="footer">
-            <a href="https://www.facebook.com">
-                 <img
-                    src={fb}width='23px'
-                 />
-            </a>
-            <a href="https://twitter.com">
-                <img
-                    src={twitter}width='22px'
-                />
-            </a>
-            <a href="https://instagram.com">
-                <img
-                src={ig}width='21px'
-                />
-            </a>
-            <p>
-            Copyright 2019
-            </p>
-    </footer>
-    )
+export default function LabelBottomNavigation() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState('recents');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
+      <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
+      <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
+      <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
+    </BottomNavigation>
+  );
 }
-
-export default Pie;

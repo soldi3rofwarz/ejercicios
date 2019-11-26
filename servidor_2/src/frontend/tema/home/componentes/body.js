@@ -20,6 +20,13 @@ import Header from './../../../header/encabezado.js';
 import Footer from './../../../footer/pie.js';
 import Dep from './../../../../assets/c1.jpg';
 import './body.css';
+import c1 from './../../../../assets/c1.jpg';
+import lotecomercial from './../../../../assets/lotecomercial.jpg';
+import loteresidencial from './../../../../assets/loteresidencial.jpg';
+import oficinas from './../../../../assets/oficinas.jpg';
+import urbanizacion from './../../../../assets/urbanizacion.jpg';
+import apartamento from './../../../../assets/apartamento.jpg';
+
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -83,18 +90,18 @@ export default function RecipeReviewCard() {
                     <MoreVertIcon />
                 </IconButton>
                 }
-                title="Departamento"
-                subheader="Ubicación: Juigalpa"
+                title="Casas"
+                subheader=""
               />
               <CardMedia
                 className={classes.media}
-                image={Dep}
+                image={c1}
               />
-              <CardContent>
+              {/* <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                     Esta es una pequeña representación del estilo del la vista de la información
                 </Typography>
-              </CardContent>
+              </CardContent> */}
               <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
@@ -115,6 +122,7 @@ export default function RecipeReviewCard() {
               </CardActions>
             </Card>
           </Grid>
+
           <Grid
             item
             xs={12}
@@ -131,18 +139,18 @@ export default function RecipeReviewCard() {
                     <MoreVertIcon />
                 </IconButton>
                 }
-                title="Departamento"
-                subheader="Ubicación: Juigalpa"
+                title="Lote Comercial"/* 
+                subheader="Ubicación: Managua" */
               />
               <CardMedia
                 className={classes.media}
-                image={Dep}
+                image={lotecomercial}
               />
-              <CardContent>
+              {/* <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                     Esta es una pequeña representación del estilo del la vista de la información
                 </Typography>
-              </CardContent>
+              </CardContent> */}
               <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
@@ -164,6 +172,7 @@ export default function RecipeReviewCard() {
 
             </Card>
           </Grid>
+
           <Grid
             item
             xs={12}
@@ -180,18 +189,17 @@ export default function RecipeReviewCard() {
                     <MoreVertIcon />
                 </IconButton>
                 }
-                title="Departamento"
-                subheader="Ubicación: Juigalpa"
+                title="Lote Residencial"
               />
               <CardMedia
                 className={classes.media}
-                image={Dep}
+                image={loteresidencial}
               />
-              <CardContent>
+              {/* <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                     Esta es una pequeña representación del estilo del la vista de la información
                 </Typography>
-              </CardContent>
+              </CardContent> */}
               <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
@@ -212,6 +220,151 @@ export default function RecipeReviewCard() {
               </CardActions>
             </Card>
           </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="oficinas"
+              />
+              <CardMedia
+                className={classes.media}
+                image={oficinas}
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Esta es una pequeña representación del estilo del la vista de la información
+                </Typography>
+              </CardContent> */}
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <IconButton
+                className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+            </Card>
+          </Grid>
+      
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="Urbanización"
+              />
+              <CardMedia
+                className={classes.media}
+                image={urbanizacion}
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Esta es una pequeña representación del estilo del la vista de la información
+                </Typography>
+              </CardContent> */}
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <IconButton
+                className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+            </Card>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="Departamentos"
+              />
+              <CardMedia
+                className={classes.media}
+                image={apartamento}
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Esta es una pequeña representación del estilo del la vista de la información
+                </Typography>
+              </CardContent> */}
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <IconButton
+                className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+            </Card>
+          </Grid>
+
         </Grid>
       </Grid>
     </Grid>

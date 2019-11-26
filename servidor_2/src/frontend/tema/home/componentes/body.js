@@ -14,14 +14,16 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Grid from '@material-ui/core/Grid';
 
 import Header from './../../../header/encabezado.js';
 import Footer from './../../../footer/pie.js';
 import Dep from './../../../../assets/c1.jpg';
+import './body.css';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 345,
+    width: 345,
   },
   media: {
     height: 0,
@@ -56,48 +58,163 @@ export default function RecipeReviewCard() {
     <>
     <Header/>
 
-        <Card className={classes.card}>
-        <CardHeader
-            avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
-            }
-            action={
-            <IconButton aria-label="settings">
-                <MoreVertIcon />
-            </IconButton>
-            }
-            title="Departamento"
-            subheader="Ubicación: Juigalpa"
-        />
-        <CardMedia
-            className={classes.media}
-            image={Dep}
-        />
-        <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-                Esta es una pequeña representación del estilo del la vista de la información
-            </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-            <ShareIcon />
-            </IconButton>
-            <IconButton
-            className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-            })}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-            >
-            <ExpandMoreIcon />
-            </IconButton>
-        </CardActions>
-        </Card>
-        
+    <Grid
+      container
+      justify='center'
+    >
+      <Grid item xs={11} sm={11} md={9}>
+        <Grid
+          container
+          spacing={8}
+        >
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="Departamento"
+                subheader="Ubicación: Juigalpa"
+              />
+              <CardMedia
+                className={classes.media}
+                image={Dep}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Esta es una pequeña representación del estilo del la vista de la información
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <IconButton
+                className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="Departamento"
+                subheader="Ubicación: Juigalpa"
+              />
+              <CardMedia
+                className={classes.media}
+                image={Dep}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Esta es una pequeña representación del estilo del la vista de la información
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <IconButton
+                className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+
+            </Card>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                avatar={
+                <Avatar aria-label="recipe" className={classes.avatar}></Avatar>
+                }
+                action={
+                <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                </IconButton>
+                }
+                title="Departamento"
+                subheader="Ubicación: Juigalpa"
+              />
+              <CardMedia
+                className={classes.media}
+                image={Dep}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Esta es una pequeña representación del estilo del la vista de la información
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                <ShareIcon />
+                </IconButton>
+                <IconButton
+                className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+                >
+                <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
     <Footer/>
     </>
   );

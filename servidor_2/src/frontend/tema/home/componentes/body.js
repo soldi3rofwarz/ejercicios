@@ -5,42 +5,26 @@ import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
+import { pink } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
-
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import Zoom from '@material-ui/core/Zoom';
-
-
 import Header from './../../../header/encabezado.js';
 import Footer from './../../../footer/pie.js';
-import './body.css';
 import c1 from './../../../../assets/c1.jpg';
 import lotecomercial from './../../../../assets/lotecomercial.jpg';
 import loteresidencial from './../../../../assets/loteresidencial.jpg';
-import oficinas from './../../../../assets/oficinas.jpg';
+import oficinas from './../../../../assets/oficinas.jpeg';
 import urbanizacion from './../../../../assets/urbanizacion.jpg';
 import apartamento from './../../../../assets/apartamento.jpg';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    width: 345,
+    width: 350,
   },
   media: {
     height: 0,
@@ -57,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor: pink[500],
   },
   root: {
     position: 'fixed',

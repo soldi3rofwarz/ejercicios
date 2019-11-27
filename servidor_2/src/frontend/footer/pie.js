@@ -29,4 +29,5 @@ export default function LabelBottomNavigation() {
       <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
     </BottomNavigation>
   );
-}
+} 
+ 

@@ -10,17 +10,17 @@ import IconButton from '@material-ui/core/IconButton';
 import { pink } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
 import Header from './../../../header/encabezado.js';
-import Footer from './../../../footer/pie.js';
 import c1 from './../../../../assets/c1.jpg';
 import lotecomercial from './../../../../assets/lotecomercial.jpg';
 import loteresidencial from './../../../../assets/loteresidencial.jpg';
 import oficinas from './../../../../assets/oficinas.jpeg';
 import urbanizacion from './../../../../assets/urbanizacion.jpg';
 import apartamento from './../../../../assets/apartamento.jpg';
+
+import Footer from './../../../footer/pie.js';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -114,7 +114,6 @@ export default function RecipeReviewCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
                 >
-                <ExpandMoreIcon />
                 </IconButton>
               </CardActions>
             </Card>
@@ -163,7 +162,6 @@ export default function RecipeReviewCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
                 >
-                <ExpandMoreIcon />
                 </IconButton>
               </CardActions>
 
@@ -212,7 +210,6 @@ export default function RecipeReviewCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
                 >
-                <ExpandMoreIcon />
                 </IconButton>
               </CardActions>
             </Card>
@@ -260,7 +257,6 @@ export default function RecipeReviewCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
                 >
-                <ExpandMoreIcon />
                 </IconButton>
               </CardActions>
             </Card>
@@ -308,7 +304,6 @@ export default function RecipeReviewCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
                 >
-                <ExpandMoreIcon />
                 </IconButton>
               </CardActions>
             </Card>
@@ -356,7 +351,6 @@ export default function RecipeReviewCard() {
                 aria-expanded={expanded}
                 aria-label="show more"
                 >
-                <ExpandMoreIcon />
                 </IconButton>
               </CardActions>
             </Card>
@@ -365,7 +359,23 @@ export default function RecipeReviewCard() {
         </Grid>
       </Grid>
     </Grid>
-    <Footer/>
+  
+    {/*<h1 >Bienvenidos a Bienes Raices</h1>
+    <p align ="justify">Bienes Raíces Juigalpa es una compañía ubicada en Juigalpa, Nicaragua, que se ha destacado como líder en la venta y renta de propiedades residenciales y comerciales en Managua, León y, San Juan del Sur, también se ha especializado en venta de terrenos en las playas así como  fincas agrícolas y ganaderas.  Nuestra oficina principal está ubicada en Sto. Domingo las Sierritas en el Km 8 carretera Masaya. Nos especializamos en el área residencial de más alto nivel: Santo Domingo, Las Colinas, Jean Paul Genie y Villa Fontana.
+
+Aurora Bienes Raices ofrece casas residenciales amuebladas y sin muebles en la area de Managua.  Tambien tenemos apartamentos con muebles y sin muebles.  Adicionalmente ofrecemos lotes residenciales y comerciales en Managua, espacio de oficinas y bodegas en venta y alquiler en el area de managua.  De último, Aurora Bienes Raices tambien ofrece fincas en todo el territorio Nicaraguense.
+
+Por que trabajar con Aurora Bienes Raíces?
+
+Aurora Bienes Raíces es la compañía con mas experiencia en la industria local y ofrecemos propiedades exclusivas que no se puede conseguir a través de otras agencias. 
+Todo los agentes de Aurora Bienes Raíces son  bilingües, hablan y escriben ingles y español.
+Aurora Bienes Raíces maneja información privilegiada sobre el Mercado local.
+Nuestra base de datos es la más extensa de todo Managua.
+Tenemos  contactos de negocios en Nicaragua y en toda Centro América
+Es la empresa con mas sucursales en Nicaragua, además de Managua,  ofrecemos servicios completos en León a través de Aurora Colonial Properties, en San Juan del Sur por Aurora Beachfront Realty y estamos iniciando operaciones en la ciudad de Granada. Ofrecemos propiedades de playa en todo el Pacifico así como en el Atlántico.
+Contamos con el inventario mas grande de fincas y haciendas para la venta.  .
+Aurora es un compañía con un trayectoria e historia de honestidad y eficiencia.
+              </p> */}
     </>
   );
 }

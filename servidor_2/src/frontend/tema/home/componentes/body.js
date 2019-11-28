@@ -12,7 +12,23 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
+<<<<<<< HEAD
+
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Zoom from '@material-ui/core/Zoom';
 import Header from './../../../header/encabezado.js';
+import Footer from './../../../footer/pie.js';
+=======
+import Header from './../../../header/encabezado.js';
+>>>>>>> 1d0407f231c8a93eb560af99b7e92b628d5a8004
 import c1 from './../../../../assets/c1.jpg';
 import lotecomercial from './../../../../assets/lotecomercial.jpg';
 import loteresidencial from './../../../../assets/loteresidencial.jpg';

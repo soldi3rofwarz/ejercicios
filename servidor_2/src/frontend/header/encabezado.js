@@ -15,6 +15,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
+
+import Login from './../tema/home/componentes/login'
+
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
@@ -74,6 +77,12 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+  },
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
   },
 }));
 

@@ -8,6 +8,9 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+
+import Login from './../tema/home/componentes/login'
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -17,6 +20,12 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+  },
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
   },
 }));
 
@@ -33,7 +42,8 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Bienes Raices
           </Typography>
-          <Button color="inherit">Login</Button>
+           <Button color="inherit" href="./../tema/home/componentes/login">etc</Button>
+           <Button color="inherit" href="./../tema/home/componentes/login">Login</Button>
         </Toolbar>
       </AppBar>
     </div>

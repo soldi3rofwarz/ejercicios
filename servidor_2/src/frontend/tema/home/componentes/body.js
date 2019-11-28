@@ -26,11 +26,8 @@ import Container from '@material-ui/core/Container';
 import Fab from '@material-ui/core/Fab';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
-
-
 import Header from './../../../header/encabezado.js';
 import Footer from './../../../footer/pie.js';
-import './body.css';
 import c1 from './../../../../assets/c1.jpg';
 import lotecomercial from './../../../../assets/lotecomercial.jpg';
 import loteresidencial from './../../../../assets/loteresidencial.jpg';

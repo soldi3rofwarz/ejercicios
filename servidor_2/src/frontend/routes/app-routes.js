@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Home from './../tema/home/componentes/body.js';
+import Drawer from './../drawer/drawer.js';
 //importar las rutas de las vista que se podran cargar desde el servidor//
 //luego se deben agregar las rutas ne la parte de route//
 
@@ -15,6 +16,7 @@ const AppRoutes = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={Home} />
+                <Route exact path='/drawer' component={Drawer} />
             </Switch>
         </BrowserRouter>
     );

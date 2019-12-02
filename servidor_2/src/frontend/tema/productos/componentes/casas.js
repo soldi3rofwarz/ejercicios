@@ -1,27 +1,25 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import Avatar from '@material-ui/core/Avatar';
-// import clsx from 'clsx';
+
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import CardActions from '@material-ui/core/CardActions';
-// import IconButton from '@material-ui/core/IconButton';
+
 import { pink } from '@material-ui/core/colors';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import ShareIcon from '@material-ui/icons/Share';
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 import Grid from '@material-ui/core/Grid';
 import Header from './../../../header/encabezado.js';
-import Footer from './../../../footer/pie.js';
+
 import CardContent from '@material-ui/core/CardContent';
 import Typography from  '@material-ui/core/Typography';
+import Carrousel from './carrousel'
 
 
 const useStyles = makeStyles(theme => ({
   card: {
-    width: 350,
+    width: 150,
+    maxWidth: 700,
+    
+    
   },
   media: {
     height: 0,
@@ -44,6 +42,8 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),},
+    flexGrow: 2,
+    
 }));
 
 export default function RecipeReviewCard() {
@@ -58,15 +58,16 @@ export default function RecipeReviewCard() {
 
     <>
     <Header/>
+    <Carrousel/>
 
     <Grid
       container
       justify='center'
     >
-      <Grid item xs={11} sm={11} md={9}>
+      <Grid item xs={11} sm={11} md={6}>
         <Grid
           container
-          spacing={8}
+          spacing={4}
         >
           <Grid
             item
@@ -185,7 +186,7 @@ export default function RecipeReviewCard() {
         </Grid>
       </Grid>
     </Grid>
-    <Footer/>
+    
     </>
   );
 }

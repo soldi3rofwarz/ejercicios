@@ -1,6 +1,7 @@
 import Home from './../tema/productos/componentes/casas.js';
-import Login from './../tema/home/componentes/login.js';
+import Login from './../tema/home/componentes/login'
 import drawer from './../../frontend/drawer/drawer.js';
+
 
 const serverRoutes = [
     {
@@ -8,6 +9,7 @@ const serverRoutes = [
         component:Home,
         exact: true,
     },
+    
     {
         path: '/Login',
         component:Login,

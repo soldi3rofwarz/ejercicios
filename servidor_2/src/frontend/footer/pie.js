@@ -9,10 +9,11 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    width: 1000,
   },
 });
 
+ 
 export default function LabelBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState('recents');
@@ -22,12 +23,14 @@ export default function LabelBottomNavigation() {
   };
 
   return (
+    <footer>
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
       <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
       <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
     </BottomNavigation>
+    </footer>
   );
 } 
- 
+

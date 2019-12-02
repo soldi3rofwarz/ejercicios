@@ -200,7 +200,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show new mails" color="inherit">
               <Badge badgeContent={0} color="secondary">
-                <MailIcon />
+              <MailIcon> <a href="./../tema/home/componentes/login"></a> </MailIcon>
               </Badge>
             </IconButton>
             <IconButton aria-label="show new notifications" color="inherit">

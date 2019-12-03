@@ -1,4 +1,3 @@
-
 import Header from './../../../header/encabezado.js';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';

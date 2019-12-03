@@ -1,74 +1,194 @@
-
-import Header from './../../../header/encabezado.js';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+
+import { pink, blue } from '@material-ui/core/colors';
+
 import Grid from '@material-ui/core/Grid';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
-import Paper from '@material-ui/core/Paper';
+import Header from './../../../header/encabezado.js';
+
+import CardContent from '@material-ui/core/CardContent';
+import Typography from  '@material-ui/core/Typography';
+import Carrousel from './carrousel'
+
 
 const useStyles = makeStyles(theme => ({
+  
+  card: {
+    width: 150,
+    maxWidth: 700,
+    
+    
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%',
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: pink[500],
+  },
   root: {
-    flexGrow: 1,
-  },
-  paper: {
-    height: 140,
-    width: 100,
-  },
-  control: {
-    padding: theme.spacing(2),
-  },
+    position: 'fixed',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),},
+    flexGrow: 2,
+    
 }));
 
-export default function SpacingGrid() {
-  const [spacing, setSpacing] = React.useState(2);
+export default function RecipeReviewCard() {
   const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(false);
 
-  const handleChange = event => {
-    setSpacing(Number(event.target.value));
-  };
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
 
   return (
+
     <>
     <Header/>
-    <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={spacing}>
-          {[0, 1, 2].map(value => (
-            <Grid key={value} item>
-              <Paper className={classes.paper} />
-            </Grid>
-          ))}
+    <Carrousel/>
+    <Button color="secondary" >ventas</Button>
+    <Grid
+      container
+      justify='center'
+    >
+      <Grid item xs={11} sm={11} md={9}>
+        <Grid
+          container
+          spacing={8}
+        >
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                title="Categoria"
+                subheader="Casas"
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Precio:$76,000.00
+                </Typography>
+              </CardContent>  */}
+            </Card>
+          </Grid>
+        
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                title="Precio"
+                subheader="$76,000.00"
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Precio:$76,000.00
+                </Typography>
+              </CardContent>  */}
+            </Card>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                title="Tamaño del lote"
+                subheader="188.59"
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Precio:$76,000.00
+                </Typography>
+              </CardContent>  */}
+            </Card>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                title="Precio/M² de construcción"
+                subheader="$622.95"
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Precio:$76,000.00
+                </Typography>
+              </CardContent>  */}
+            </Card>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                title="Dirección exacta"
+                subheader="Salida sur de Jinotepe, km 50 carretera panamericana 100 mts al este 250 mts al norte"
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Precio:$76,000.00
+                </Typography>
+              </CardContent>  */}
+            </Card>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+          >
+            <Card className={classes.card}>
+              <CardHeader
+                title="Precio/M² de terreno"
+                subheader="$402.99"
+              />
+              {/* <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                Precio:$76,000.00
+                </Typography>
+              </CardContent>  */}
+            </Card>
+          </Grid>
+
         </Grid>
       </Grid>
-      {/* <Grid item xs={12}>
-        <Paper className={classes.control}>
-          <Grid container>
-            <Grid item>
-              <FormLabel>spacing</FormLabel>
-              <RadioGroup
-                name="spacing"
-                aria-label="spacing"
-                value={spacing.toString()}
-                onChange={handleChange}
-                row
-              >
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(value => (
-                  <FormControlLabel
-                    key={value}
-                    value={value.toString()}
-                    control={<Radio />}
-                    label={value.toString()}
-                  />
-                ))}
-              </RadioGroup>
-            </Grid>
-          </Grid>
-        </Paper>
-      </Grid> */}
+      
     </Grid>
+    
     </>
   );
 }

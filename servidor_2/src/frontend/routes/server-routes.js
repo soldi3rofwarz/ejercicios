@@ -13,11 +13,11 @@ const serverRoutes = [
         exact: true,
     },
 
-    {   
+    /* {   
         path: '/drawer',
         component: drawer,
         exact: true,
-    },
+    }, */
 ];
 
 export default serverRoutes;

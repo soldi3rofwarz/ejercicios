@@ -9,12 +9,11 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
- const Carrousel =()=> {
+
 const tutorialSteps = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States ',
+    label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
       'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -42,8 +41,9 @@ const tutorialSteps = [
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 700,
-    flexGrow: 2,
+    maxWidth: 400,
+    flexGrow: 1,
+    alignItems: 'center'
   },
   header: {
     display: 'flex',
@@ -53,11 +53,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    height: 400,
+    height: 255,
     display: 'block',
-    maxWidth: 700,
+    maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
+    left: 300
   },
 }));
 
@@ -80,8 +81,6 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-
-  
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
@@ -119,8 +118,8 @@ function SwipeableTextMobileStepper() {
         }
       />
     </div>
-   
   );
 }
-}
+
+
 export default SwipeableTextMobileStepper;

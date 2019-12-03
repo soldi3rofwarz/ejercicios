@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 
-import { pink } from '@material-ui/core/colors';
+import { pink, blue } from '@material-ui/core/colors';
 
 import Grid from '@material-ui/core/Grid';
 import Header from './../../../header/encabezado.js';
@@ -15,6 +15,7 @@ import Carrousel from './carrousel'
 
 
 const useStyles = makeStyles(theme => ({
+  
   card: {
     width: 150,
     maxWidth: 700,
@@ -59,15 +60,15 @@ export default function RecipeReviewCard() {
     <>
     <Header/>
     <Carrousel/>
-
+    <Button color="secondary" >ventas</Button>
     <Grid
       container
       justify='center'
     >
-      <Grid item xs={11} sm={11} md={6}>
+      <Grid item xs={11} sm={11} md={9}>
         <Grid
           container
-          spacing={4}
+          spacing={8}
         >
           <Grid
             item
@@ -185,6 +186,7 @@ export default function RecipeReviewCard() {
 
         </Grid>
       </Grid>
+      
     </Grid>
     
     </>

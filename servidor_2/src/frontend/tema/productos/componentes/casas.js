@@ -1,17 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 
 import { pink, blue } from '@material-ui/core/colors';
-
+import Button from './boton'
 import Grid from '@material-ui/core/Grid';
 import Header from './../../../header/encabezado.js';
 
 import CardContent from '@material-ui/core/CardContent';
 import Typography from  '@material-ui/core/Typography';
 import Carrousel from './carrousel'
+import { relative } from 'path';
 
 
 const useStyles = makeStyles(theme => ({
@@ -54,13 +55,16 @@ export default function RecipeReviewCard() {
   // const handleExpandClick = () => {
   //   setExpanded(!expanded);
   // };
+ 
 
   return (
 
     <>
     <Header/>
     <Carrousel/>
-    <Button color="secondary" >ventas</Button>
+    <Button color="secondary" label="ventas"></Button>
+    
+    
     <Grid
       container
       justify='center'

@@ -120,6 +120,4 @@ function SwipeableTextMobileStepper() {
     </div>
   );
 }
-
-
 export default SwipeableTextMobileStepper;

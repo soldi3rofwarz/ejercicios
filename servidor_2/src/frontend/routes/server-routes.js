@@ -1,4 +1,4 @@
-import Home from './../tema/productos/componentes/casas.js';
+import Home from './../tema/home/componentes/body.js';
 import Login from './../tema/home/componentes/login.js';
 const serverRoutes = [
     {

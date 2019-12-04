@@ -17,7 +17,7 @@ import Carrousel from './carrousel'
 const useStyles = makeStyles(theme => ({
   
   card: {
-    width: 150,
+    width: 350,
     maxWidth: 700,
     
     
@@ -50,10 +50,6 @@ const useStyles = makeStyles(theme => ({
 export default function RecipeReviewCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  // };
 
   return (
 
@@ -96,7 +92,7 @@ export default function RecipeReviewCard() {
             md={4}
           >
             <Card className={classes.card}>
-              <CardHeader
+            <CardHeader
                 title="Precio"
                 subheader="$76,000.00"
               />
@@ -115,7 +111,7 @@ export default function RecipeReviewCard() {
             md={4}
           >
             <Card className={classes.card}>
-              <CardHeader
+            <CardHeader
                 title="Tamaño del lote"
                 subheader="188.59"
               />
@@ -134,15 +130,10 @@ export default function RecipeReviewCard() {
             md={4}
           >
             <Card className={classes.card}>
-              <CardHeader
+            <CardHeader
                 title="Precio/M² de construcción"
                 subheader="$622.95"
               />
-              {/* <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                Precio:$76,000.00
-                </Typography>
-              </CardContent>  */}
             </Card>
           </Grid>
 
@@ -153,7 +144,7 @@ export default function RecipeReviewCard() {
             md={4}
           >
             <Card className={classes.card}>
-              <CardHeader
+            <CardHeader
                 title="Dirección exacta"
                 subheader="Salida sur de Jinotepe, km 50 carretera panamericana 100 mts al este 250 mts al norte"
               />
@@ -172,15 +163,14 @@ export default function RecipeReviewCard() {
             md={4}
           >
             <Card className={classes.card}>
-              <CardHeader
-                title="Precio/M² de terreno"
-                subheader="$402.99"
+            <CardHeader
+              title="Precio/M² de terreno"
               />
-              {/* <CardContent>
+              <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                 Precio:$76,000.00
                 </Typography>
-              </CardContent>  */}
+              </CardContent>
             </Card>
           </Grid>
 

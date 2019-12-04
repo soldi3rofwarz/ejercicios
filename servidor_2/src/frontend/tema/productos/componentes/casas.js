@@ -4,6 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import { pink, blue } from '@material-ui/core/colors';
+<<<<<<< HEAD
+=======
+import Button from './boton'
+>>>>>>> 84cc2b39d1898c5f6ddbb62d7dcf7283c0caa67c
 import Grid from '@material-ui/core/Grid';
 import Header from './../../../header/componentes/encabezado.js';
 import CardContent from '@material-ui/core/CardContent';

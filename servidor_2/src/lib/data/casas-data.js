@@ -1,34 +1,30 @@
 import db from './firestore-config';
 
-const CLAVE_PUBLICACIONES = 'publicaciones';
+const CLAVE_INFORMACION = 'informacion';
 
-export const obtenerPublicaciones = async () => {
-    const querySnapShot = await db.collection(CLAVE_PUBLICACIONES).get();
-    const publicaciones = [];
+export const obtenerInformacion = async () => {
+    const querySnapShot = await db.collection(CLAVE_INFORMACION).get();
+    const informacion = [];
     querySnapShot.forEach((documento)=> {
-        publicaciones.push({
+        informacion.push({
             id: documento.id,
             ...documento.data(),
         });
     });
-    return publicaciones;
+    return informacion;
 }
-    export const guardarPublicacion = async (publicacion) => {
-        await db.collection(CLAVE_PUBLICACIONES).add(
-            publicacion
+    export const guardarInformacion = async (informacion) => {
+        await db.collection(CLAVE_INFORMACION).add(
+            informacion
         );
     }
 
-    export const actualizarPublicacion = async (publicacionId, publicacion) => {
-        await db.collection(CLAVE_PUBLICACIONES).doc(publicacionId).update(
-            publicacion
+    export const actualizarInformacion = async (informacionId, informacion) => {
+        await db.collection(CLAVE_INFORMACION).doc(informacionId).update(
+            informacion
         );
     }
 
-    export const eliminarPublicacion = async (publicacionId) => {
-        await db.collection(CLAVE_PUBLICACIONES).doc(publicacionId).delete();
+    export const eliminarInformacion = async (informacionId) => {
+        await db.collection(CLAVE_INFORMACION).doc(informacionId).delete();
     }
-
-    
-
-

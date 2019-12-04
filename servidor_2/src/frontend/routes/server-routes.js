@@ -12,6 +12,13 @@ const serverRoutes = [
         component:Login,
         exact: true,
     }, 
+
+    {
+        path: '/casas',
+        component:casas,
+        exact: true,
+    },
+
 ];
 
 export default serverRoutes;

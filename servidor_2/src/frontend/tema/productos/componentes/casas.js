@@ -50,14 +50,11 @@ export default function RecipeReviewCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
-<<<<<<< HEAD
-=======
   // const handleExpandClick = () => {
   //   setExpanded(!expanded);
   // };
  
 
->>>>>>> 1adf968106aa3f435aab44be9e955171a80e7e8a
   return (
 
     <>

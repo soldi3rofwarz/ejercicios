@@ -1,104 +1,101 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import ReactDOM from 'react-dom'
+import { render } from '@testing-library/react';
 
-
-export default function TemporaryDrawer() {
-    const classes = useStyles();  
-    const [state, setState] = React.useState({
-      top: false,
-      left: false,
-      bottom: false,
-      right: false,
-    });
-  
-    const toggleDrawer = (side, open) => event => {
-      if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-        return;
-      }
-  
-      setState({ ...state, [side]: open });
-    };
-  
-    const sideList = side => (
-      <div
-        className={classes.list}
-        role="presentation"
-        onClick={toggleDrawer(side, false)}
-        onKeyDown={toggleDrawer(side, false)}
-      >
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
-    );
-  
-    const fullList = side => (
-      <div
-        className={classes.fullList}
-        role="presentation"
-        onClick={toggleDrawer(side, false)}
-        onKeyDown={toggleDrawer(side, false)}
-      >
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
-    );
-  
-    return (
-      <div>
-        <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
-        <Button onClick={toggleDrawer('right', true)}>Open Right</Button>
-        <Button onClick={toggleDrawer('top', true)}>Open Top</Button>
-        <Button onClick={toggleDrawer('bottom', true)}>Open Bottom</Button>
-        <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
-          {sideList('left')}
-        </Drawer>
-        <Drawer anchor="top" open={state.top} onClose={toggleDrawer('top', false)}>
-          {fullList('top')}
-        </Drawer>
-        <Drawer anchor="bottom" open={state.bottom} onClose={toggleDrawer('bottom', false)}>
-          {fullList('bottom')}
-        </Drawer>
-        <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
-          {sideList('right')}
-        </Drawer>
-      </div>
-    );
+class Login extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {isLoginOpen: true, isRegisterOpen: false}
   }
+
+  showLoginBox(){
+    this.state({isLoginOpen:true ,isRegisterOpen:false})
+  }
+
+  showRegisterBox(){
+    this.state({isRegisterOpen:true,isLoginOpen:false})
+  }
+
+render(){
+  return(
+    <div className="root-container">
+      <div className="box-controller">
+        <div className={"controller " + (this.state.isLoginOpen ? "selected-controller": "")}
+        onClick={this.showLoginBox.bind(this)} >
+          Login
+        </div>
+        <div className={"controller" + (this.state.isRegisterOpen ? "selected-controller": "")}
+        onClick={this.showRegisterBox.bind(this)}>
+            Registrarse
+        </div>
+
+      </div>
+      <div className="box-container"></div>
+      {this.state.isLoginOpen && <LoginBox/>}
+      {this.state.isRegisterOpen && <RegisterBox/>}
+    </div>
+  )
+}
+}
+
+class LoginBox extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {}
+  }
+  submitLogin(e){
+
+  }
+
+  render(){
+    return(
+    <div className="inner-container">
+      <div className="box-header">
+        Login
+      </div>
+      <div className="box">
+        <div className="input-group">
+          <label htmlFor="username">Nombre de ususario</label>
+          <input type="text" name="username"  placeholder="nombre de usuario o email" />
+        </div>
+        <div className="input-group">
+          <label htmlFor="password">Contraseña</label>
+          <input type="password" name="password"  placeholder="Contraseña" />
+        </div>
+        <button type="button" className="login-button" onClick={this.submitLogin.bind(this)}>Login</button>
+      </div>
+    </div>
+    )
+  }
+}
+
+class RegisterBox extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {}
+  }
+  submitReg(e){
+    
+  }
+
+  render(){
+    return(
+    <div className="inner-container">
+      <div className="box-header">
+        Registrarse
+      </div>
+      <div className="box">
+        <div className="input-group">
+          <label htmlFor="username">Nombre de ususario</label>
+          <input type="text" name="username"  placeholder="nombre de usuario o email" />
+        </div>
+        <div className="input-group">
+          <label htmlFor="password">Contraseña</label>
+          <input type="password" name="password"  placeholder="Contraseña" />
+        </div>
+        <button type="button" className="login-button" onClick={this.submitReg.bind(this)}>Registrarse</button>
+      </div>
+    </div>
+    )
+  }
+}

@@ -1,11 +1,7 @@
-import Header from './../../../header/encabezado.js';
+import Header from './../../../header/componentes/encabezado.js';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
@@ -13,16 +9,18 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   paper: {
-    height: 140,
-    width: 100,
+    marginTop:30,
+    height: 330,
+    width: 250,
+    backgroundColor: '#f8f8f8',
   },
   control: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
   },
 }));
 
 export default function SpacingGrid() {
-  const [spacing, setSpacing] = React.useState(2);
+  const [spacing, setSpacing] = React.useState(4);
   const classes = useStyles();
 
   const handleChange = event => {
@@ -32,40 +30,15 @@ export default function SpacingGrid() {
   return (
     <>
     <Header/>
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root} spacing={4}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
-          {[0, 1, 2].map(value => (
+          {[0, 1, 2, 3].map(value => (
             <Grid key={value} item>
               <Paper className={classes.paper} />
             </Grid>
           ))}
         </Grid>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.control}>
-          <Grid container>
-            <Grid item>
-              <FormLabel>spacing</FormLabel>
-              <RadioGroup
-                name="spacing"
-                aria-label="spacing"
-                value={spacing.toString()}
-                onChange={handleChange}
-                row
-              >
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(value => (
-                  <FormControlLabel
-                    key={value}
-                    value={value.toString()}
-                    control={<Radio />}
-                    label={value.toString()}
-                  />
-                ))}
-              </RadioGroup>
-            </Grid>
-          </Grid>
-        </Paper>
       </Grid>
     </Grid>
     </>

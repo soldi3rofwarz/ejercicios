@@ -115,7 +115,7 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       
-      <MenuItem onClick={handleMenuClose}>Login</MenuItem>
+      <MenuItem onClick={handleMenuClose} >Login</MenuItem>
     </Menu>
   );
 

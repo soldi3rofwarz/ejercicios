@@ -13,11 +13,11 @@ const serverRoutes = [
         exact: true,
     }, 
 
-    {
+   /*  {
         path: '/casas',
         component:casas,
         exact: true,
-    },
+    }, */
 
 ];
 

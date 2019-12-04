@@ -1,5 +1,5 @@
-import Home from './../tema/productos/componentes/casas.js';
-import Login from './../tema/home/componentes/login.js'
+import Home from './../tema/home/componentes/body.js';
+import Login from './../tema/home/componentes/login.js';
 const serverRoutes = [
     {
         path: '/',
@@ -11,13 +11,14 @@ const serverRoutes = [
         path: '/Login',
         component:Login,
         exact: true,
+    }, 
+
+    {
+        path: '/casas',
+        component:casas,
+        exact: true,
     },
 
-    /* {   
-        path: '/drawer',
-        component: drawer,
-        exact: true,
-    }, */
 ];
 
 export default serverRoutes;

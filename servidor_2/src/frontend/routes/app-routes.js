@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from './../tema/productos/componentes/casas.js';
+import Home from './../tema/home/componentes/body.js';
 //importar las rutas de las vista que se podran cargar desde el servidor//
 //luego se deben agregar las rutas ne la parte de route//
 

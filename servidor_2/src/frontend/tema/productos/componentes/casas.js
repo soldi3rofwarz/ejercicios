@@ -10,6 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from  '@material-ui/core/Typography';
 import Carrousel from './carrousel'
 import { relative } from 'path';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles(theme => ({
@@ -17,7 +18,6 @@ const useStyles = makeStyles(theme => ({
   card: {
     width: 350,
     maxWidth: 700,
-    
     
   },
   media: {
@@ -49,9 +49,6 @@ export default function RecipeReviewCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  // };
  
 
   return (

@@ -14,6 +14,11 @@ const images = [
     title: 'Terrenos',
     width: '30%',
   },
+  {
+    url: 'https://capeltonmexico.com/wp-content/uploads/2019/05/remolque-8-m-oficina-.png',
+    title: 'Oficinas',
+    width: '30%',
+  },
 
 ];
 

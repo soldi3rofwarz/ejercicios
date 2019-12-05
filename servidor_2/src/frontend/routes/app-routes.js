@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from '../tema/home/componentes/home-comp';
+import Home from './../tema/componentes/home-comp';
 import Productos from './../tema/productos/componentes/casas';
 // import Login from './../tema/home/componentes/login/form';
 import Inicio from './../tema/home/inicio';

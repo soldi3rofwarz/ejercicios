@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import Paper from '@material-ui/core/Paper';
+
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
@@ -34,7 +35,8 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 400,
     flexGrow: 1,
     alignItems: 'center',
-    marginLeft: '30%'
+    marginLeft: '32%',
+    
   },
   header: {
     display: 'flex',

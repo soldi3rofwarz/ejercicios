@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import { pink, blue } from '@material-ui/core/colors';
-import Button from './boton'
 import Grid from '@material-ui/core/Grid';
 import Header from './../../../header/componentes/encabezado.js';
 import CardContent from '@material-ui/core/CardContent';

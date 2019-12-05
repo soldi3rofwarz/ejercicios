@@ -7,11 +7,11 @@ const serverRoutes = [
         exact: true,
     },
     
-    /* {
+     {
         path: '/Login',
         component:Login,
         exact: true,
-    },  */
+    },  
 
     // {
     //     path: '/casas',

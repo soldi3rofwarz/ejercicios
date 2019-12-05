@@ -19,6 +19,7 @@ const AppRoutes = () => {
             <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route exact path='/casas' component={productos}/>
+                <Route exact path='/from' component={Login}/>
             </Switch>
         </BrowserRouter>
     );

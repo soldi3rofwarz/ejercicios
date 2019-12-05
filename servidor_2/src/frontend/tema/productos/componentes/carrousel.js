@@ -43,7 +43,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 400,
     flexGrow: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    
   },
   header: {
     display: 'flex',

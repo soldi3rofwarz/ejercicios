@@ -5,8 +5,9 @@ import {
   Route,
 } from "react-router-dom";
 
-import Home from '../tema/home/componentes/home.js/index.js';
+import Home from '../tema/home/componentes/home';
 import Productos from './../tema/productos/componentes/casas.js';
+import Login from './../tema/home/componentes/login/from'
 //importar las rutas de las vista que se podran cargar desde el servidor//
 //luego se deben agregar las rutas ne la parte de route//
 
@@ -16,12 +17,8 @@ const AppRoutes = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={Home}/>
-<<<<<<< HEAD
-                <Route exact path='/casas' component={productos}/>
-                <Route exact path='/from' component={Login}/>
-=======
                 <Route exact path='/casas' component={Productos}/>
->>>>>>> bcc1e06cf3e6a06d880ef20ee384dcecb7871959
+                <Route exact path='/from' component={Login}/>
             </Switch>
         </BrowserRouter>
     );

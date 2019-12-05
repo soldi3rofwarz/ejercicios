@@ -1,4 +1,4 @@
-import Header from '../../../header/componentes/encabezado.js';
+import Header from '../../../tema/componentes/encabezado.js';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';

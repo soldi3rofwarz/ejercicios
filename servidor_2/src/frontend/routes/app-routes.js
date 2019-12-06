@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Home from '../tema/home/componentes/home';
-import Productos from './../tema/productos/componentes/casas.js';
+import Productos from '';
 import Login from './../tema/home/componentes/login/from'
 //importar las rutas de las vista que se podran cargar desde el servidor//
 //luego se deben agregar las rutas ne la parte de route//

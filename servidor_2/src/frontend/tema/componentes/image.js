@@ -5,7 +5,7 @@ import {
 } from '@material-ui/core/styles'
 import Allimage from './allimage';
 
-const Galeria = (props) => {
+const Imagen = (props) => {
 
     const { datos } = props;
 
@@ -36,7 +36,7 @@ const Galeria = (props) => {
                                         item
                                         xs={4}
                                     >
-                                        <GaleriaImagen
+                                        <Allimage
                                             dato={dato}
                                         />
                                     </Grid>
@@ -52,4 +52,4 @@ const Galeria = (props) => {
 
 };
 
-export default Galeria;
+export default Imagen;

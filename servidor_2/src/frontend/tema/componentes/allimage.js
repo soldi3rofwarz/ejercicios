@@ -37,10 +37,10 @@ const useStyles = makeStyles(theme => ({
   
   export default function ComplexGrid() {
     const classes = useStyles();
+  }
+    const AllImagen = (props) => {
 
-const AllImagen = (props) => {
-
-    const { datainf } = props;
+    const { datos } = props;
 
     return (
         <div>
@@ -94,4 +94,4 @@ const AllImagen = (props) => {
 
 };
 
-export default datagalery;
+export default AllImagen;

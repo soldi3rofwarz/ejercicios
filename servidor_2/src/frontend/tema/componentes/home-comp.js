@@ -1,4 +1,4 @@
-import Header from '../../../header/componentes/encabezado.js';
+import Header from '../../tema/componentes/encabezado';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -6,12 +6,12 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
-import Image1 from './../../../../assets/apartamento.jpg';
-import Image2 from './../../../../assets/c1.jpg';
-import Image3 from './../../../../assets/c2.jpg';
-import Image4 from './../../../../assets/c3.jpg';
-import Image5 from './../../../../assets/csa2.jpg';
-import Image6 from './../../../../assets/c5.jpg';
+import Image1 from './../../../assets/apartamento.jpg';
+import Image2 from './../../../assets/c1.jpg';
+import Image3 from './../../../assets/c2.jpg';
+import Image4 from './../../../assets/c3.jpg';
+import Image5 from './../../../assets/csa2.jpg';
+import Image6 from './../../../assets/c5.jpg';
 
 const Image =[
 

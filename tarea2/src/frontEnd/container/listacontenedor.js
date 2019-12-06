@@ -60,6 +60,7 @@ class InicioContenedor extends Component {
                 color={color}
                 cambiarColor={cambiarColor}
                 imagenes={datos}
+                button
             />
         );
 

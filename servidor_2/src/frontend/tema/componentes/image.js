@@ -34,7 +34,7 @@ const Imagen = (props) => {
                                     <Grid
                                         key={dato.titulo}
                                         item
-                                        xs={4}
+                                        xs={6}
                                     >
                                         <Allimage
                                             dato={dato}

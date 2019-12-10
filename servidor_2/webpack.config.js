@@ -99,7 +99,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {
-                postcss: [
+                postcss: [      
                     autoprefixer(),
                 ],
             },

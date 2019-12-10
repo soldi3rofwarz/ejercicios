@@ -19,7 +19,6 @@ const Product = (props) => {
                     item
                     xs={12}
                     sm={12}
-                    md={8}
                 >
                     <SectionApp />
                 </Grid>

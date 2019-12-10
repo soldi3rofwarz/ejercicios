@@ -10,6 +10,7 @@ require('asset-require-hook')({
         'jpg',
         'png',
         'gif',
+        
     ],
     name: '/assets/resources/[name].[ext]',
 });

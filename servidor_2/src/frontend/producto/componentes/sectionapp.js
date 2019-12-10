@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
     },
     DescLem: {
         position: 'absolute',
-        width: '100px',
+        width: '600px',
         height: '100px',
-        left: 'calc(50% - 50px)',
-        top: 'calc(100% - 50px)',
+        left: 'calc(40% - 20px)',
+        top: 'calc(50% - 50px)',
         fontSize: '24px',
     },
     contenedorDatos:{
@@ -51,7 +51,7 @@ const BackImg = (props) => {
                     src={ImagenBackg}
                 />
                 <h4 className={classes.DescLem}>
-                    Encuentra lo que andas buscando en este lugar...
+                    My lucifer is lonely...
                 </h4>
             
             </div>
@@ -72,7 +72,7 @@ const BackImg = (props) => {
                     </div>
 
                     <div className={classes.datos}>
-                        <b>27</b> Proyectos nuevos
+                        <b>Proyectos nuevos</b> 
                     </div>
 
                 </div>

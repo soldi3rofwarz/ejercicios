@@ -18,10 +18,10 @@ const AppRoutes = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path='/' component={Home}/>
-                <Route exact path='/casas' component={Productos}/>
+                {/*<Route exact path='/' component={Home}/>*/}
+                <Route exact path='/' component={Productos}/>
                 {/* <Route exact path='/form' component={Login}/> */}
-                <Route exact path='/inicio' component={Inicio}/>
+                {/*<Route exact path='/inicio' component={Inicio}/>*/}
             </Switch>
         </BrowserRouter>
     );

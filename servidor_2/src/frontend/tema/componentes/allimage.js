@@ -5,6 +5,8 @@ const AllImagen = (props) => {
 
     const { dato } = props;
 
+    console.log("0000000000",dato);
+
     return (
         <div>
             <article className='galeria-imagen'>

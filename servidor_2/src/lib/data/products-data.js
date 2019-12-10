@@ -1,6 +1,6 @@
 import db from './firestore-config';
 
-const CLAVE_INFORMACION = 'informacion';
+const CLAVE_INFORMACION = 'producto';
 
 export const obtenerProductos = async () => {
     const querySnapShot = await db.collection(CLAVE_INFORMACION).get();

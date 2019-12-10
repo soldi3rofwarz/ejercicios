@@ -6,9 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
 
-import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
@@ -43,7 +40,8 @@ const useStyles = makeStyles(theme => ({
     const { datos } = props;
 
     return (
-        <div>
+
+        <>
             <div className={classes.root}>
                 <Paper className={classes.paper}>
                     <Grid container spacing={2}>
@@ -72,26 +70,7 @@ const useStyles = makeStyles(theme => ({
                     </Grid>
                 </Paper>
             </div>
-            {/* <Button
-                variant="contained"
-                color="secondary"
-                component={ Link }
-                to={`/editar/${dato.id}`}
-            >
-                Ver más
-            </Button>
-            <Button
-                variant="outlined"
-                color="secondary"
-                component={ Link }
-                to={`/eliminar/${dato.id}`}
-            >
-                Eliminar
-            </Button>*/}
-            
-        </div>
+    </>
     );
 
 };
-
-export default AllImagen;

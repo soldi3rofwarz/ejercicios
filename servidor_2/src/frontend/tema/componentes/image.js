@@ -28,7 +28,7 @@ const Imagen = (props) => {
                         className='galeria'
                     >
                         {
-                            datos.map(dato => {
+                            datos.map(datos => {
                                 
                                 return (
                                     <Grid
@@ -36,7 +36,7 @@ const Imagen = (props) => {
                                         item
                                         xs={4}
                                     >
-                                        <Allimage
+                                        <GaleriaImagen
                                             dato={dato}
                                         />
                                     </Grid>

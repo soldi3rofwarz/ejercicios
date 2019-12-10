@@ -93,19 +93,19 @@ class ProductsContent extends Component {
 
         return (
             <Products
-                alldata={datainf}
+                oferts={datainf}
             />
         );
 
     }
 
     async componentDidMount() {
-        const alldata = await obtenerProductos();
+        const oferts = await obtenerProductos();
 
         console.log("componentDidMount: Cargando datos de firestore");
         
         this.setState({
-            datainf: alldata,
+            datainf: oferts,
         });
     }
 

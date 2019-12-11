@@ -25,7 +25,7 @@ const Imagen = (props) => {
                         container
                         justify='center'
                         spacing={1}
-                        className='galeria'
+                        className=''
                     >
                         {
                             

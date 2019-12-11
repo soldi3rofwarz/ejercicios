@@ -7,10 +7,9 @@ import {
 
 //import Home from './../tema/componentes/home-comp';
 import Productos from './../producto/contenedor/Products-Content';
-// import Login from './../tema/home/componentes/login/form';
+import Login from './../tema/componentes/login/form';
 //import Inicio from './../tema/home/inicio';
-//import Compimg from './../infproducto/componentes/compimagen'
-
+import Compimg from './../infproducto/componentes/compimagen'
 
 //importar las rutas de las vista que se podran cargar desde el servidor//
 //luego se deben agregar las rutas ne la parte de route//
@@ -21,8 +20,8 @@ const AppRoutes = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path='/' component={Productos}/>
-                //<Route exact path='/casas' component={}/>
-                {/* <Route exact path='/form' component={Login}/> */}
+                
+                 <Route exact path='/Login' component={Login}/> 
                 <Route exact path='/inicio' component={Inicio}/>
             </Switch>
         </BrowserRouter>

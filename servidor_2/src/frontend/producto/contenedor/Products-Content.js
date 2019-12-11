@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Products from './../componentes/products';
-
+import {obtenerProductos} from './../../../lib/data/products-data';
 
 class ProductsContent extends Component {
 
@@ -9,6 +9,7 @@ class ProductsContent extends Component {
 
         const datainf = [
             {
+                id:"",
                 imagen: require('./../../../assets/casas.png'),
                 titulo: 'casa1',
                 precio: '$ 3000',
@@ -27,6 +28,8 @@ class ProductsContent extends Component {
 
         console.log(datainf);
 
+        console.log(datainf);
+
         return (
             <Products
                 oferts={datainf}
@@ -36,13 +39,20 @@ class ProductsContent extends Component {
     }
 
     async componentDidMount() {
-        const oferts = await obtenerProductos();
+        try{
+            const oferts = await  obtenerProductos();
 
-        console.log("componentDidMount: Cargando datos de firestore");
-        
-        this.setState({
-            datainf: oferts,
-        });
+            console.log('777777',oferts);
+
+            console.log("componentDidMount: Cargando datos de firestore");
+            
+            this.setState({
+                datainf: oferts,
+            });
+        }
+        catch(e) {
+            console.log("no cargo", e);
+        }
     }
 
 }

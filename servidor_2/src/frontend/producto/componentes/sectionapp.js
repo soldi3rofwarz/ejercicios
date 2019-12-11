@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
     datos: {
         marginLeft: '20px',
         marginRight: '20px',
-        marginTop: '10px',
+        marginTop: '20px',
+        marginBottom: '20px',
         color: '#828282',
         backgroundColor: '#f5f5f5',
         borderColor: '#e0dcde',
@@ -43,7 +44,7 @@ const BackImg = (props) => {
     const classes = useStyles();
 
     return (
-        <>
+        <div>
             <div
                 className={classes.backG}
             >
@@ -78,7 +79,7 @@ const BackImg = (props) => {
 
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 export default BackImg;

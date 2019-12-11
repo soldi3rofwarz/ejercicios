@@ -7,7 +7,7 @@ import Allimage from './allimage';
 
 const Imagen = (props) => {
 
-    const { datos } = props;
+    const {datos } = props;
 
     return (
         <section>
@@ -25,14 +25,17 @@ const Imagen = (props) => {
                         container
                         justify='center'
                         spacing={1}
-                        className='galeria'
+                        className=''
                     >
                         {
+                            
                             datos.map(dato => {
+
+                                
                                 
                                 return (
                                     <Grid
-                                        key={dato.titulo}
+                                        key={dato.id}
                                         item
                                         xs={6}
                                     >

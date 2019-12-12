@@ -9,8 +9,7 @@ const useStyles = makeStyles((theme) => ({
     },
     ImgBack: {
         width: '100%',
-        height: '200px',
-        objectFit: 'cover',
+        height: '400px',
     },
     DescLem: {
         position: 'absolute',

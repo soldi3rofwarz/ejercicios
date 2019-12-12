@@ -14,6 +14,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -213,7 +214,10 @@ export default function PrimarySearchAppBar() {
             </IconButton>
             
           </div>
-            <Button variant="contained" color="secondary">
+            <Button variant="contained" color="secondary" 
+            component={ Link }
+            to='/registro'
+            >
               Agregar producto
             </Button>
           <div className={classes.sectionMobile}>

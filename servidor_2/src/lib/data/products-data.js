@@ -41,7 +41,7 @@ export const seleccionarProducto = async (Id) => {
         await db.collection(CLAVE_PRODUCTO).doc(productoId).delete();
     }
 
-    export const obtenerProducto = async (productoId) => {
+    export const obtenerProducto = async (Id) => {
         const querySnapshot =await db.collection(CLAVE_PRODUCTO).doc(Id).get();
         let producto={};
         if (querySnapshot.exists){

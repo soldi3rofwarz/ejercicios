@@ -18,11 +18,11 @@ const serverRoutes = [
         exact: true,
     },   
 
-     /* {
-        path: '/InfoImagen',
-         component:KK,
+     {
+        path: '/registro',
+         component:registro,
           exact: true,
-     }, */
+     }, 
 
     //  {
     //      path: '/inicio',

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './../tema/componentes/encabezado';
+import Header from '././componentes/header';
 import Botones from './botones';
 
 const Portada = (props) => {

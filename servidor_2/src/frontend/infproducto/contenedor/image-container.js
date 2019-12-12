@@ -47,8 +47,8 @@ import {obternerProducto} from './../../../lib/data/products-data';
      async componentDidMount() {
         const { Id } = this.props.match.params;
         console.log(`Publicación Id: ${Id}`);
-        const informacion = await seleccionarPublicacion(Id);
-        const { categoria,imagen,precio,propietario,titulo,ubicacion } = informacion;
+        /* const informacion = await seleccionarPublicacion(Id);
+        const { categoria,imagen,precio,propietario,titulo,ubicacion } = informacion; */
         const producto = await obternerProducto(Id);
         const { categoria,imagen,precio,propietario,titulo,ubicacion } = producto;
         this.setState({

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom';
 import Imagen from './../componentes/compimagen'
-import {seleccionarPublicacion} from './../../../lib/data/products-data'
+import {obternerProducto} from './../../../lib/data/products-data';
 
  class ContDetalle extends Component{
     constructor(props) {
@@ -29,6 +29,7 @@ import {seleccionarPublicacion} from './../../../lib/data/products-data'
 
             return(
                 
+                <div>
                     <Imagen
                     categoria={categoria}
                     imagen={imagen}
@@ -37,7 +38,7 @@ import {seleccionarPublicacion} from './../../../lib/data/products-data'
                     titulo={titulo}
                     ubicacion={ubicacion}  
                     />
-                
+                </div>
             )
         };
         
@@ -48,6 +49,8 @@ import {seleccionarPublicacion} from './../../../lib/data/products-data'
         console.log(`Publicación Id: ${Id}`);
         const informacion = await seleccionarPublicacion(Id);
         const { categoria,imagen,precio,propietario,titulo,ubicacion } = informacion;
+        const producto = await obternerProducto(Id);
+        const { categoria,imagen,precio,propietario,titulo,ubicacion } = producto;
         this.setState({
             categoria,
             imagen,

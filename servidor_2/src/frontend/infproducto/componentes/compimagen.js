@@ -78,8 +78,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function SwipeableTextMobileStepper() {
-  const classes = useStyles();
+function SwipeableTextMobileStepper(props) {
+  const {
+    imagen,
+  } = props;
+  
+const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = tutorialSteps.length;
@@ -102,16 +106,13 @@ function SwipeableTextMobileStepper() {
     <div className={classes.root}>
       <Grid container >
           <Grid xs={12} sm={12} md={6} lg={6}>
-            <Paper square elevation={0} className={classes.header}>
-                <Typography>{tutorialSteps[activeStep].label}</Typography>
-            </Paper>
             <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
             >
-                <img className={classes.img} src={Imagen} />
+                <img className={classes.img} src={imagen} />
             </AutoPlaySwipeableViews>
             <MobileStepper
                 steps={maxSteps}

@@ -67,14 +67,10 @@ const Allimage = (props) =>{
                 </Grid>
                 <Grid item>
                     <Typography style={{ cursor: 'pointer' }}>
-<<<<<<< HEAD
                         <Button variant="contained" color="primary" href="#contained-buttons"
                         component={ Link }
                         to='/detalle'
                         >Ver más</Button>
-=======
-                        <Button className='viewmore' variant="contained" color="primary" href="#contained-buttons">Ver más</Button>
->>>>>>> a24eba294066579d857310c61c15e5f8b7fcb383
                     </Typography>
                 </Grid>
                 </Grid>

@@ -82,7 +82,15 @@ const theme = createMuiTheme({
   },
 });
 
-const Info =()=>{
+const Info =(props)=>{
+  const {
+    categoria,
+    precio,
+    propietario,
+    titulo,
+    ubicacion
+} = props;
+
     const classes = useStyles();
     return(
         <div className={classes.root}>

@@ -16,7 +16,7 @@ import {seleccionarPublicacion} from './../../../lib/data/products-data'
         };
      };
         render(){
-            const {
+           const {
             categoria,
             imagen,
             precio,
@@ -25,35 +25,29 @@ import {seleccionarPublicacion} from './../../../lib/data/products-data'
             ubicacion,
             } = this.state;
 
-            if(Redirect !== '') {
-                return (
-                    <Redirect
-                        to={Redirect}
-                    />
-                );
-            }
+             
 
             return(
-                <>
+                
                     <Imagen
-                    /* categoria={categoria}
+                    categoria={categoria}
                     imagen={imagen}
                     precio={precio}
                     propietario={propietario}
                     titulo={titulo}
-                    ubicacion={ubicacion} */
+                    ubicacion={ubicacion}  
                     />
-                </>
+                
             )
         };
         
     
 
-    async componentDidMount() {
+     async componentDidMount() {
         const { Id } = this.props.match.params;
         console.log(`Publicación Id: ${Id}`);
-        const producto = await seleccionarPublicacion(Id);
-        const { categoria,imagen,precio,propietario,titulo,ubicacion } = producto;
+        const informacion = await seleccionarPublicacion(Id);
+        const { categoria,imagen,precio,propietario,titulo,ubicacion } = informacion;
         this.setState({
             categoria,
             imagen,
@@ -62,7 +56,7 @@ import {seleccionarPublicacion} from './../../../lib/data/products-data'
             titulo,
             ubicacion
         });
-    }
+    } 
 } 
 export default ContDetalle;
 

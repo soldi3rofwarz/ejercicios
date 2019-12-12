@@ -20,8 +20,8 @@ const AppRoutes = () => {
         <BrowserRouter>
             <Switch>
                 {/*<Route exact path='/' component={Home}/>*/}
-                <Route exact path='/' component={Compimg}/>
-                {/* {<Route exact path='/Detalle' component={Compimg}/>} */}
+                <Route exact path='/' component={Productos}/>
+                { <Route exact path='/Detalle' component={Compimg}/>} 
                 {/*<Route exact path='/inicio' component={Inicio}/>*/}
             </Switch>
         </BrowserRouter>

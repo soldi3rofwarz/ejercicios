@@ -50,13 +50,21 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#F9F9F6',
     
   },
+  header:{
+    "&::after":{
+      content: "after",
+    }
+  },
   header: {
     display: 'flex',
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    backgroundColor: 'lineargradient(to left, blue, rgba(0,0,0,0.5))',
+    
+    top: '30px',
   },
+  
+
   img: {
     height: 305,
     display: 'block',

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-class Footer extends Component{
-
   const useStyles = makeStyles(theme => ({
     grow: {
       flexGrow: 1,
@@ -64,12 +62,15 @@ class Footer extends Component{
       },
     },
   }));
-  
-  export default function ComplexGrid() {
-    const classes = useStyles();
 
-  return(
-        
-};
+  class Footer extends Component{
+
+    const
+
+    return(
+
+    );
+
+  };
 
 export default Footer;

@@ -12,7 +12,7 @@ const serverRoutes = [
     },
     
     {
-        path: '/detalle',
+        path: '/detalle/:productoId',
         component:Compimg,
         exact: true,
     },   

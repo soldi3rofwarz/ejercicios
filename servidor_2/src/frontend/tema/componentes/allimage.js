@@ -69,7 +69,7 @@ const Allimage = (props) =>{
                     <Typography style={{ cursor: 'pointer' }}>
                         <Button variant="contained" color="primary" href="#contained-buttons"
                         component={ Link }
-                        to='/detalle'
+                        to={`/Detalle/${dato.id}`}
                         >Ver más</Button>
                     </Typography>
                 </Grid>

@@ -14,8 +14,8 @@ export const obtenerProductos = async () => {
     return producto;
 }
 
-export const seleccionarProducto = async (Id) => {
-    const querySnapshot = await db.collection(CLAVE_PRODUCTO).doc(Id).get();
+export const seleccionarProducto = async (productoId) => {
+    const querySnapshot = await db.collection(CLAVE_PRODUCTO).doc(productoId).get();
     let producto = {};
     if(querySnapshot.exists) {
         producto = {
@@ -39,17 +39,4 @@ export const seleccionarProducto = async (Id) => {
 
     export const eliminarProducto = async (productoId) => {
         await db.collection(CLAVE_PRODUCTO).doc(productoId).delete();
-    }
-
-    export const obtenerProducto = async (productoId) => {
-        const querySnapshot =await db.collection(CLAVE_PRODUCTO).doc(Id).get();
-        let producto={};
-        if (querySnapshot.exists){
-
-            producto={
-
-                ...querySnapshot.data()
-            };
-        }
-        return producto;
     }

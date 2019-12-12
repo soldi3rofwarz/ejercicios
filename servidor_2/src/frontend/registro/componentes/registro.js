@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     },
 
     container:{
-        
+        width: '70%',
         
     },
     Grid:{
@@ -79,44 +79,54 @@ const registro = (props) => {
                 </Paper>
                 </Grid>
                 <Grid xs={12}>
+                    <Paper className={classes.paper}> 
                     <h1>Imagen</h1>
                     <input type="file"
                         placeholder='Imagen'
                         onChange={eventoCambiarImagen}
                         value={imagen}
                     />
+                    </Paper>
                     </Grid>
                     <Grid xs={12}>
+                        <Paper className={classes.paper}>
                         <h1>Precio</h1>
                         <input
                             placeholder='Precio'
                             onChange={eventoCambiarPrecio}
                             value={precio}
                         />
+                        </Paper>
                     </Grid>
                     <Grid xs={12}>
+                        <Paper className={classes.paper}>
                         <h1>Propietario</h1>
                         <input
                             placeholder='Propietario'
                             onChange={eventoCambiarPropietario}
                             value={propietario}
                         />
+                        </Paper>
                     </Grid>
                     <Grid xs={12}>
+                        <Paper className={classes.paper}>
                         <h1>Título</h1>
                         <input
                             placeholder='Título'
                             onChange={eventoCambiarTitulo}
                             value={titulo}
                         />
+                        </Paper>
                     </Grid>
                     <Grid xs={12}>
+                        <Paper className={classes.paper}>
                         <h1>Ubicacion</h1>
                         <input
                             placeholder='Ubicacion'
                             onChange={eventoCambiarUbicacion}
                             value={ubicacion}
                         />
+                        </Paper>
                     </Grid>
             <button
                 onClick={eventoGuardar}

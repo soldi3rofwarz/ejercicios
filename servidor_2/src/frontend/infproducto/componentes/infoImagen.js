@@ -82,35 +82,43 @@ const theme = createMuiTheme({
   },
 });
 
-const Info =()=>{
+const Info =(props)=>{
+  const {
+    categoria,
+    precio,
+    propietario,
+    titulo,
+    ubicacion
+} = props;
+
     const classes = useStyles();
     return(
         <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>Casa:</Paper>
+    <Paper className={classes.paper}>{categoria}</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Precio:</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+    <Paper className={classes.paper}>{precio}</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>Dueño:</Paper>
+    <Paper className={classes.paper}>Dueño:</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=3</Paper>
+          <Paper className={classes.paper}>{propietario}</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Direccion:</Paper>
         </Grid><Grid item xs={6}>
-          <Paper className={classes.paper}>xs=3</Paper>
+    <Paper className={classes.paper}>{ubicacion}</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Tipo:</Paper>
         </Grid><Grid item xs={6}>
-          <Paper className={classes.paper}>xs=3</Paper>
+    <Paper className={classes.paper}>{titulo}</Paper>
         </Grid>
         <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
         Reservar

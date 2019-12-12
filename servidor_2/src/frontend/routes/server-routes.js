@@ -12,11 +12,11 @@ const serverRoutes = [
         exact: true,
     },
     
-     {
+    {
         path: '/detalle',
         component:Compimg,
         exact: true,
-    },  
+    },   
 
      /* {
         path: '/InfoImagen',

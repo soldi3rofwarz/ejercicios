@@ -16,8 +16,10 @@ const useStyles = makeStyles((theme) => ({
         width: '600px',
         height: '100px',
         left: 'calc(40% - 20px)',
-        top: 'calc(50% - 50px)',
-        fontSize: '24px',
+        top: 'calc(50% - 120px)',
+        fontSize: '30px',
+        color:'red',
+        fontWeight: 600,
     },
     contenedorDatos:{
         display: 'flex',

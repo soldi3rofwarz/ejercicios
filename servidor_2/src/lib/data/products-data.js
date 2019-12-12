@@ -13,6 +13,18 @@ export const obtenerProductos = async () => {
     });
     return informacion;
 }
+
+export const seleccionarPublicacion = async (Id) => {
+    const querySnapshot = await db.collection(CLAVE_INFORMACION).doc(Id).get();
+    let informacion = {};
+    if(querySnapshot.exists) {
+        informacion = {
+            ...querySnapshot.data()
+        };
+    }
+    return informacion;
+}
+
     export const guardarInformacion = async (informacion) => {
         await db.collection(CLAVE_INFORMACION).add(
             informacion

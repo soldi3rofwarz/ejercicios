@@ -7,15 +7,15 @@ import Compimg from './../infproducto/contenedor/image-container'
 const serverRoutes = [
     {
         path: '/',
-        component: Productos,
+        component: Compimg,
         exact: true,
     },
     
-     {
+    /* {
         path: '/detalle',
         component:Compimg,
         exact: true,
-    },  
+    },   */
 
      /* {
         path: '/InfoImagen',

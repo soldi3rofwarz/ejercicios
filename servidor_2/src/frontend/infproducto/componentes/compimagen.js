@@ -15,7 +15,7 @@ import Header from './../../tema/componentes/header'
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
-  {
+  /* {
     label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
       'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
@@ -39,7 +39,7 @@ const tutorialSteps = [
     label: 'Goč, Serbia',
     imgPath:
       'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
+  }, */
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -111,13 +111,7 @@ function SwipeableTextMobileStepper() {
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
             >
-                {tutorialSteps.map((step, index) => (
-                <div key={step.label}>
-                    {Math.abs(activeStep - index) <= 2 ? (
-                    <img className={classes.img} src={step.imgPath} alt={step.label} />
-                    ) : null}
-                </div>
-                ))}
+                <img className={classes.img} src={Imagen} />
             </AutoPlaySwipeableViews>
             <MobileStepper
                 steps={maxSteps}

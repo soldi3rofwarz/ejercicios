@@ -8,12 +8,12 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -66,6 +66,7 @@ const useStyles = makeStyles(theme => ({
   },
   sectionDesktop: {
     display: 'none',
+    marginRight: '10px',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
     },
@@ -170,7 +171,7 @@ export default function PrimarySearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-          
+
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Bienes Raices
@@ -210,7 +211,11 @@ export default function PrimarySearchAppBar() {
             >
               <AccountCircle />
             </IconButton>
+            
           </div>
+            <Button variant="contained" color="secondary">
+              Agregar producto
+            </Button>
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"

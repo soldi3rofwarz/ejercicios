@@ -7,7 +7,7 @@ import Compimg from './../infproducto/contenedor/image-container'
 const serverRoutes = [
     {
         path: '/',
-        component: Compimg,
+        component: Productos,
         exact: true,
     },
     

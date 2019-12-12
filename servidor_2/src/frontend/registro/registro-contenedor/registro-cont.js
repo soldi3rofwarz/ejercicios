@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Registro from './../componentes/registro';
-
 class registroCont extends Component {
 
     constructor(props) {
@@ -27,7 +26,7 @@ class registroCont extends Component {
         );
     }
 
-    cambiarCategoria = (event) => {
+    cambiarNombres = (event) => {
         this.setState({
             categoria: event.target.value,
         });

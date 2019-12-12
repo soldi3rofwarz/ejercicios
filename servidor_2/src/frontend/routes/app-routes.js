@@ -22,8 +22,7 @@ const AppRoutes = () => {
             <Switch>
                 {/*<Route exact path='/' component={Home}/>*/}
                 <Route exact path='/' component={Productos}/>
-                 
-                <Route exact path='/Detalle' component={Compimg}/>
+                <Route exact path='/Detalle/:productoId' component={Compimg}/>
                 {/*<Route exact path='/inicio' component={Inicio}/>*/}
                 {<Route exact path='/registro' component={registro}/>}
             </Switch>

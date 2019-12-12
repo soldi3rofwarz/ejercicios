@@ -2,10 +2,9 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { createMuiTheme, withStyles,ThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { green, purple } from '@material-ui/core/colors';
-
+import Tema from './../../tema/componentes/tema';
 const useStyles = makeStyles(theme => ({
   root: {
     width:'100%',
@@ -64,69 +63,51 @@ const BootstrapButton = withStyles({
   },
 })(Button);
 
-const ColorButton = withStyles(theme => ({
-  root: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
-    '&:hover': {
-      backgroundColor: purple[700],
-    },
-  },
-}))(Button);
+const VerProducto = (props) => {
 
-
-
-const theme = createMuiTheme({
-  palette: {
-    primary: green,
-  },
-});
-
-const Info =(props)=>{
   const {
-    categoria,
-    precio,
-    propietario,
-    titulo,
-    ubicacion
-} = props;
+      categoria,
+      precio,
+      propietario,
+      titulo,
+      ubicacion
+  } = props;
+
 
     const classes = useStyles();
     return(
-        <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-    <Paper className={classes.paper}>{categoria}</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Precio:</Paper>
-        </Grid>
-        <Grid item xs={6}>
-    <Paper className={classes.paper}>{precio}</Paper>
-        </Grid>
-        <Grid item xs={6}>
-    <Paper className={classes.paper}>Dueño:</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>{propietario}</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Direccion:</Paper>
-        </Grid><Grid item xs={6}>
-    <Paper className={classes.paper}>{ubicacion}</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Tipo:</Paper>
-        </Grid><Grid item xs={6}>
-    <Paper className={classes.paper}>{titulo}</Paper>
-        </Grid>
-        <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
-        Reservar
-      </BootstrapButton>
-      </Grid>
-    </div>
-    )
-}
+
+      <Tema>
+          <div className={classes.root}>
+            <Grid container spacing={3}>
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>{categoria}</Paper>
+              </Grid>
+
+              <Grid item xs={6}>
+                <Paper className={classes.paper}>Precio: {precio}</Paper>
+              </Grid>
+
+              <Grid item xs={6}>
+                <Paper className={classes.paper}>Dueño: {propietario}</Paper>
+              </Grid>
+
+              <Grid item xs={6}>
+                <Paper className={classes.paper}>Direccion: {ubicacion}</Paper>
+              </Grid>
+
+              <Grid item xs={6}>
+                <Paper className={classes.paper}>Tipo: {titulo}</Paper>
+              </Grid>
+
+              <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
+              Reservar
+            </BootstrapButton>
+            </Grid>
+        </div>
+      </Tema>
+    );
+};
 
 
-export default Info;
+export default VerProducto;

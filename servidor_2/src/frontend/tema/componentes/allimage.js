@@ -32,6 +32,12 @@ const useStyles = makeStyles(theme => ({
     fontSize: '15px',
     fontWeight: 350,
     color: '#828282',
+    marginTop:'30px',
+  },
+
+  viewmore:{
+      
+    position:'right',
   }
 }));
 
@@ -60,7 +66,7 @@ const Allimage = (props) =>{
                 </Grid>
                 <Grid item>
                     <Typography style={{ cursor: 'pointer' }}>
-                        <Button variant="contained" color="primary" href="#contained-buttons">Ver más</Button>
+                        <Button className='viewmore' variant="contained" color="primary" href="#contained-buttons">Ver más</Button>
                     </Typography>
                 </Grid>
                 </Grid>
@@ -76,71 +82,3 @@ const Allimage = (props) =>{
     );
 };
 export default Allimage;
-
-
-
-
-
-
-
-
-
-
-/* import React from 'react';
-import './stylesimag.css';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
-    
-    contenido: {
-        paddingTop: '16px',
-        paddingBottom: '8px',
-    },
-    
-    galeriaimagen: {
-        position: 'relative',
-    },
-    
-    imagen: {
-        width: '100%',
-        height: '260px',
-        objectFit: 'cover',
-    },
-    
-    titulo: {
-        position: 'absolute',
-        bottom: 0,
-        color: '#fff',
-        textAlign: 'center',
-        paddingTop: '8px',
-        paddingBottom: '8px',
-        background: 'greylight',
-        width: '100%',
-        margin: 0,
-        marginBottom:'4px',
-    },
-}));
-
-const AllImagen = (props) => {
-
-    const { dato } = props;
-
-    console.log("0000000000",dato);
-
-    return (
-        <>
-              <div>         
-                  <img 
-                            src={dato.imagen}
-                            alt={dato.titulo}
-                        />
-                    
-                        <h1>{dato.titulo}</h1>
-                        
-                        <b>{dato.categoría}</b>
-                </div> 
-        </>
-    );
-
-};
-export default AllImagen; */

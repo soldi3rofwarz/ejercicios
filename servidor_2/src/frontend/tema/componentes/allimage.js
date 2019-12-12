@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -71,8 +72,16 @@ const Allimage = (props) =>{
                 </Grid>
                 </Grid>
                 <Grid item>
+<<<<<<< HEAD
+                <Typography variant="subtitle1">
+                    <Button variant="contained" color="primary" href="#contained-buttons"
+                    component={ Link }
+                    to='/Compimg'
+                    >Ver más</Button>
+=======
                 <Typography>
                     
+>>>>>>> 7e79cd56df21fcfebb7d07b336a2f4d0ee46e8e1
                 </Typography>
                 </Grid>
             </Grid>

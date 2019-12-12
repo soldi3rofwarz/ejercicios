@@ -2,6 +2,7 @@ import React from 'react';
 import ImagenBackg from './../../../assets/Exteriores.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 
+
 const useStyles = makeStyles((theme) => ({
     backG: {
         position: 'relative',

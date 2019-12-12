@@ -1,8 +1,8 @@
 //import Home from './../tema/componentes/home-comp';
 import Productos from './../producto/contenedor/Products-Content';
- import Login from './../tema/componentes/login/form'; 
+import Login from './../tema/componentes/login/form'; 
 //import Inicio from './../tema/inicio';
-import Compimg from './../infproducto/componentes/compimagen'
+import Compimg from './../infproducto/contenedor/image-container'
 
 const serverRoutes = [
     {
@@ -11,11 +11,11 @@ const serverRoutes = [
         exact: true,
     },
     
-    {
-        path: '/Login',
-        component:Login,
+     {
+        path: '/detalle',
+        component:Compimg,
         exact: true,
-    }, 
+    },  
 
      /* {
         path: '/InfoImagen',

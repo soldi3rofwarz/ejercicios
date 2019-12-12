@@ -2,7 +2,8 @@
 import Productos from './../producto/contenedor/Products-Content';
 import Login from './../tema/componentes/login/form'; 
 //import Inicio from './../tema/inicio';
-import Compimg from './../infproducto/contenedor/image-container'
+import Compimg from './../infproducto/contenedor/image-container';
+import registro from './../registro/registro-contenedor/registro-cont';
 
 const serverRoutes = [
     {
@@ -28,6 +29,8 @@ const serverRoutes = [
     //      component: Inicio,
     //      exact:true,
     //  },
+
+
 
 ];
 

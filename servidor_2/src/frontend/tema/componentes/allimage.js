@@ -11,13 +11,15 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * (2),
     margin: 'auto',
-    maxWidth: 500,
+    maxWidth: 400,
+    marginBottom:'35px',
+    background:'#f4f4f4',
   },
   image: {
     width: 128,
-    height: 128,
+    height: 200,
   },
   img: {
     margin: 'auto',
@@ -27,10 +29,9 @@ const useStyles = makeStyles(theme => ({
   },
   cat:{
 
-    fontSize: '14px',
-    fontWeight: 400,
+    fontSize: '15px',
+    fontWeight: 350,
     color: '#828282',
-
   }
 }));
 
@@ -43,28 +44,29 @@ const Allimage = (props) =>{
     return (
         <div className={classes.root}>
         <Paper className={classes.paper}>
-            <Grid container spacing={16}>
+            <Grid container spacing={4}>
             <Grid item>
                 <ButtonBase className={classes.image}>
-                <img className={classes.img} alt="complex" src={dato.imagen} alt={dato.titulo} />
+                <img className={classes.img} alt="complex" src={dato.imagen} />
                 </ButtonBase>
             </Grid>
             <Grid item xs={12} sm container>
-                <Grid item xs container direction="column" spacing={16}>
-                <Grid item xs>
+                <Grid item xs container direction="column" spacing={4}>
+                <Grid item xs spacing={2}>
                     <Typography gutterBottom>
-                        <h3 className={classes.cat}>{dato.categoría}</h3>
+                        <h3 className={classes.cat}>Ubicación: {dato.ubicacion}</h3>
                     </Typography>
+                    <Typography color="textSecondary">Precio: {dato.precio}</Typography>
+                </Grid>
+                <Grid item>
+                    <Typography style={{ cursor: 'pointer' }}>
+                        <Button variant="contained" color="primary" href="#contained-buttons">Ver más</Button>
+                    </Typography>
+                </Grid>
+                </Grid>
+                <Grid item>
+                <Typography>
                     
-                    <Typography color="textSecondary">{dato.precio}</Typography>
-                </Grid>
-                <Grid item>
-                    <Typography style={{ cursor: 'pointer' }}>{dato.categoría}</Typography>
-                </Grid>
-                </Grid>
-                <Grid item>
-                <Typography variant="subtitle1">
-                    <Button variant="contained" color="primary" href="#contained-buttons">Ver más</Button>
                 </Typography>
                 </Grid>
             </Grid>

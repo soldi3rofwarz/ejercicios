@@ -1,5 +1,5 @@
 import React from 'react';
-import ImagenBackg from './../../../assets/casas.png';
+import ImagenBackg from './../../../assets/Exteriores.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     },
     ImgBack: {
         width: '100%',
-        height: '300px',
+        height: '200px',
         objectFit: 'cover',
     },
     DescLem: {
@@ -27,6 +27,17 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer',
     },
     datos: {
+        marginLeft: '20px',
+        marginRight: '20px',
+        marginTop: '20px',
+        marginBottom: '20px',
+        color: '#828282',
+        backgroundColor: '#f5f5f5',
+        borderColor: '#e0dcde',
+        padding: '15px',
+        borderRadius: '7px',
+    },
+    datos:{
         marginLeft: '20px',
         marginRight: '20px',
         marginTop: '20px',

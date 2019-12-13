@@ -77,7 +77,6 @@ const VerProducto = (props) => {
     const classes = useStyles();
     return(
 
-      <Tema>
           <div className={classes.root}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
@@ -105,7 +104,6 @@ const VerProducto = (props) => {
             </BootstrapButton>
             </Grid>
         </div>
-      </Tema>
     );
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Imagen from './../componentes/compimagen';
+import Imagen from './../componentes/producto';
 import {seleccionarProducto} from './../../../lib/data/products-data';
 
 

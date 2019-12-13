@@ -137,7 +137,7 @@ const classes = useStyles();
                 
             />
           </Grid>
-        <Grid xs={12} sm={12} md={6} lg={6}>
+        <Grid xs={6} sm={6} md={6} lg={6}>
             <Info
             categoria= {categoria}
             precio ={precio}

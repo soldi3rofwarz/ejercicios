@@ -1,44 +1,51 @@
 import React, { Component } from 'react';
-import Products from './../componentes/products';
-import {obtenerProductos} from './../../../lib/data/products-data';
+import Products from '../componentes/products';
+import {obtenerProductos, obtenerProductosCat} from '../../../lib/data/products-data';
 
 class ProductsContent extends Component {
 
+    
+    
     constructor(props) {
         super(props);
-
-        const datainf = [
-            {
-                id:"",
-                imagen: require('./../../../assets/casas.png'),
-                titulo: 'casa1',
-                precio: '$ 3000',
-            },
             
-        ];
-
         this.state = {
-            datainf: datainf,
+
+            datainf: []
+
         };
     }
 
+    cambiarCategoria = async (categoria) =>{
+
+        console.log("funcion")
+        try{
+            const oferts = await  obtenerProductosCat(categoria);
+            console.log('categorias',oferts);
+            this.setState({
+                datainf: oferts,
+            });
+        }
+        catch(e) {
+            console.log("no cargo", e);
+        }
+    }
+
+    
     render() {
 
-        const { datainf } = this.state;
-
-        console.log(datainf);
-
-        console.log(datainf);
+        const {datainf}=this.state;
 
         return (
             <Products
-                oferts={datainf}
+                cambiarCategoria={this.cambiarCategoria} datos={datainf}
             />
         );
 
     }
 
     async componentDidMount() {
+        
         try{
             const oferts = await  obtenerProductos();
 

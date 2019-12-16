@@ -14,6 +14,21 @@ export const obtenerProductos = async () => {
     return producto;
 }
 
+export const obtenerProductosCat = async (ValorCategoria) => {
+    const querySnapShot = await db.collection(CLAVE_PRODUCTO).get();
+    const producto = [];
+    querySnapShot.forEach((documento)=> {
+        if(documento.data().categoria===ValorCategoria){
+            producto.push({
+                id: documento.id,
+                ...documento.data(),
+
+            });
+        };
+    });
+    return producto;
+}
+
 export const seleccionarProducto = async (productoId) => {
     const querySnapshot = await db.collection(CLAVE_PRODUCTO).doc(productoId).get();
     let producto = {};

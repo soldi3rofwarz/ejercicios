@@ -1,5 +1,5 @@
 //import Home from './../tema/componentes/home-comp';
-import Productos from './../producto/contenedor/Products-Content';
+import Productos from './../Inicio/contenedor/Products-Content';
 import Login from './../tema/componentes/login/form'; 
 //import Inicio from './../tema/inicio';
 import Compimg from './../infproducto/contenedor/image-container';

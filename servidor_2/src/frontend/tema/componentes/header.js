@@ -214,12 +214,12 @@ export default function PrimarySearchAppBar() {
             </IconButton>
             
           </div>
-            <Button variant="contained" color="secondary" 
+            {/* <Button variant="contained" color="secondary" 
             component={ Link }
             to='/registro'
             >
               Agregar producto
-            </Button>
+            </Button> */}
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"

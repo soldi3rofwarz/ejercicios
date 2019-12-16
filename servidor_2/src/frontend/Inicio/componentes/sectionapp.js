@@ -39,21 +39,11 @@ const useStyles = makeStyles((theme) => ({
         padding: '15px',
         borderRadius: '7px',
     },
-    datos:{
-        marginLeft: '20px',
-        marginRight: '20px',
-        marginTop: '20px',
-        marginBottom: '20px',
-        color: '#828282',
-        backgroundColor: '#f5f5f5',
-        borderColor: '#e0dcde',
-        padding: '15px',
-        borderRadius: '7px',
-    },
 }));
 
 const BackImg = (props) => {
 
+ const {cambiarCategoria}=props;
     const classes = useStyles();
 
     return (
@@ -74,11 +64,11 @@ const BackImg = (props) => {
                 <div
                     className={classes.contenedorDatos}
                 >
-                    <div className={classes.datos}>
+                    <div onClick= { ()=> cambiarCategoria ("Ventas")} >
                         <b>Ventas</b>
                     </div>
 
-                    <div className={classes.datos}>
+                    <div onClick= { ()=> cambiarCategoria ("Alquiler")} className={classes.datos}>
                         <b>Alquileres</b>
                     </div>
 

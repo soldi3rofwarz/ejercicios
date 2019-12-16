@@ -6,6 +6,14 @@ import InfoIma from './infoImagen';
 import Grid from '@material-ui/core/Grid';
 
 const Producto = (props) =>{
+    const {
+        imagen,
+        categoria,
+        precio,
+        propietario,
+        titulo,
+        ubicacion
+      } = props;
 
     return (
         <Tema
@@ -24,8 +32,22 @@ const Producto = (props) =>{
                         item
                         xs={10}
                          >
-                            <CompImagen />
+                            <CompImagen imagen={imagen}/>
                         </Grid>
+
+                        <Grid
+                        item
+                        xs={10}
+                         >
+                             
+                            <InfoIma
+                                categoria= {categoria}
+                                precio ={precio}
+                                propietario ={propietario}
+                                titulo= {titulo}
+                                ubicacion={ubicacion}/>
+                        </Grid>
+
                 </Grid>
             </Grid>
         </Tema>

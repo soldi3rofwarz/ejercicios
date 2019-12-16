@@ -8,9 +8,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import Info from './infoImagen'
 import Grid from '@material-ui/core/Grid';
-import Tema from './../../tema/componentes/tema';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -81,11 +79,6 @@ const useStyles = makeStyles(theme => ({
 function SwipeableTextMobileStepper(props) {
   const {
     imagen,
-    categoria,
-    precio,
-    propietario,
-    titulo,
-    ubicacion
   } = props;
   
 const classes = useStyles();
@@ -138,13 +131,7 @@ const classes = useStyles();
             />
           </Grid>
         <Grid xs={6} sm={6} md={6} lg={6}>
-            <Info
-            categoria= {categoria}
-            precio ={precio}
-            propietario ={propietario}
-            titulo= {titulo}
-            ubicacion={ubicacion}
-            />
+
         </Grid>
       </Grid>
     </div>

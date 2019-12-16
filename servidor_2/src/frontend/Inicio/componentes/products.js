@@ -1,13 +1,13 @@
 import React from 'react';
-import Tema from './../../tema/componentes/tema';
+import Tema from '../../tema/componentes/tema';
 import SectionApp from './sectionapp';
-import Imagenes from './../../tema/componentes/image';
+import ImagenContent from './../../producto/contenedor/imagen-contenedor';
 
 import Grid from '@material-ui/core/Grid';
 
 const Product = (props) => {
 
-    const { oferts } = props;
+    const {cambiarCategoria, datos}=props;
 
     return (
         <Tema>
@@ -20,13 +20,11 @@ const Product = (props) => {
                     xs={12}
                     sm={12}
                 >
-                    <SectionApp />
+                    <SectionApp cambiarCategoria={cambiarCategoria}/>
                 </Grid>
 
             </Grid>
-            <Imagenes
-                datos={oferts}
-            />
+            <ImagenContent datos={datos}/>
         </Tema>
     );
 

@@ -4,7 +4,6 @@ import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import AppRoutes from './routes/app-routes';
 
-
 const App = () => {
     React.useEffect(() => {
         const jssStyles = document.getElementById('jss-server-side');
@@ -24,6 +23,3 @@ ReactDOM.hydrate(
         <App />
     </Router>
 , document.getElementById('app'));
-
-
-

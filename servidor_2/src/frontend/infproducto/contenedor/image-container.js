@@ -49,12 +49,12 @@ import {seleccionarProducto} from './../../../lib/data/products-data';
             const { categoria, imagen, precio, propietario, titulo, ubicacion, } = producto;
             console.log(producto);
             this.setState({
-                categoria,
-                imagen,
-                precio,
-                propietario,
-                titulo,
-                ubicacion,
+                categoria:categoria,
+                imagen:imagen,
+                precio:precio,
+                propietario:propietario,
+                titulo:titulo,
+                ubicacion:ubicacion,
             });
     } 
 } 

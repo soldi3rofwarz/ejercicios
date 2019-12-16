@@ -6,9 +6,10 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
     root: {
-      maxWidth: '100%',
+      maxWidth: '50%',
       flexGrow: 1,
       marginTop: '20px',
+      margin:400,
       backgroundColor: '#F9F9F6',
     },
 
@@ -25,6 +26,8 @@ const useStyles = makeStyles(theme => ({
         color: 'white',
         fontSize: '18px;',
         background: 'linear-gradient(to left, #085078, #85D8CE)',
+        border: '1px solid black',
+        margin: 5,
       },
 }
 ))
@@ -128,11 +131,13 @@ const registro = (props) => {
                         />
                         </Paper>
                     </Grid>
-            <button
-                onClick={eventoGuardar}
-            >
-                Guardar
-            </button>
+                    <Grid xs={12}>
+                    <button
+                        onClick={eventoGuardar}
+                    >
+                        Guardar
+                    </button>
+                    </Grid>
             {
                 guardado === true && (<h1>{categoriaResultado}</h1>)
             }

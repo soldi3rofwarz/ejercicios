@@ -1,7 +1,7 @@
 import React from 'react';
 import Tema from './../../tema/componentes/tema';
 import CompImagen from './compimagen';
-import InfoIma from './infoImagen';
+
 
 import Grid from '@material-ui/core/Grid';
 
@@ -32,16 +32,8 @@ const Producto = (props) =>{
                         item
                         xs={10}
                          >
-                            <CompImagen imagen={imagen}/>
-                        </Grid>
-
-                        <Grid
-                        item
-                        xs={10}
-                         >
-                             
-                            <InfoIma
-                                categoria= {categoria}
+                            <CompImagen imagen={imagen} 
+                                categoria= {categoria} 
                                 precio ={precio}
                                 propietario ={propietario}
                                 titulo= {titulo}

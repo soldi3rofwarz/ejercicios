@@ -11,8 +11,9 @@ import SaveIcon from '@material-ui/icons/Save';
 
 const useStyles = makeStyles(theme => ({
     fondo:{
-        width :'100%',
+        width :'50%',
         background: '#3F51B5',
+        
 
     },
 
@@ -23,11 +24,16 @@ const useStyles = makeStyles(theme => ({
       margin:200,
       backgroundColor: '#3F51B5',
       marginLeft: 20,
+      justify:'center',
       
     },
 
+    input:{
+        color:'white',
+    },
+
     container:{
-        width: '120%',
+        width: '50%',
         
     },
     Grid:{
@@ -46,8 +52,6 @@ const useStyles = makeStyles(theme => ({
     
 }
 ))
-
-  
 
 const registro = (props) => {
     
@@ -86,7 +90,7 @@ const registro = (props) => {
     return(
     <>
         <Header/>
-        <div className = {classes.fondo}>
+        <div>
             <div className ={classes.root}> 
                 <Grid container>
                 <Grid xs={12}>
@@ -107,11 +111,10 @@ const registro = (props) => {
                             className={classes.input}
                             id="contained-button-file"
                             multiple
-                            type="file"
                         />
                             <label htmlFor="contained-button-file"> 
                             <Button variant="contained" color="primary" component="span">
-                            Upload
+                                Upload
                             </Button>
                             </label>
                         </Paper> 

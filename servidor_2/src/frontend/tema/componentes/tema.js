@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './header';
+import Footer from './footer';
 
 const Tema = (props) => {
 
@@ -7,10 +8,11 @@ const Tema = (props) => {
 
     return (
         <>
-            <Header />
+            <Header/>
             <section>
                 {children}
             </section>
+            <Footer/>
         </>
     );
 };

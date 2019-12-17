@@ -50,7 +50,7 @@ const BootstrapButton = withStyles({
       '"Segoe UI Symbol"',
     ].join(','),
     '&:hover': {
-      backgroundColor: '#FFBC9A',
+      backgroundColor: 'green',
       borderColor: '#FFBC9A',
       boxShadow: 'none',
     },

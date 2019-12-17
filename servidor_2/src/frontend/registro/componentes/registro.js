@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
       maxWidth: '50%',
       flexGrow: 1,
       marginTop: '20px',
-      margin:400,
+      margin:200,
       backgroundColor: '#3F51B5',
       
     },
@@ -159,11 +159,12 @@ const registro = (props) => {
                         Registrar
                         </Button>
                     </Paper>
-                    </Grid>
+                   
                         {
                             guardado === true && (<h1>{categoriaResultado}</h1>)
                         }
-            </Grid>
+                    
+                </Grid>      
         </div>
     </div>
     </>

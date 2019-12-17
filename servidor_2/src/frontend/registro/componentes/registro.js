@@ -32,6 +32,8 @@ const useStyles = makeStyles(theme => ({
 }
 ))
 
+  
+
 const registro = (props) => {
     
     const classes = useStyles();
@@ -81,7 +83,7 @@ const registro = (props) => {
                     />
                 </Paper>
                 </Grid>
-                <Grid xs={12}>
+                {/* <Grid xs={12}>
                     <Paper className={classes.paper}> 
                     <h1>Imagen</h1>
                     <input type="file"
@@ -90,7 +92,7 @@ const registro = (props) => {
                         value={imagen}
                     />
                     </Paper>
-                    </Grid>
+                    </Grid> */}
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
                         <h1>Precio</h1>

@@ -86,7 +86,7 @@ const VerProducto = (props) => {
               </Grid>
 
               <Grid item xs={6}>
-                <Paper className={classes.paper}>Precio: {precio}</Paper>
+                <Paper className={classes.paper}>Precios:{precio}</Paper>
               </Grid>
 
               <Grid item xs={6}>

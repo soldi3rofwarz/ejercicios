@@ -3,32 +3,47 @@ import Header from './../../tema/componentes/header';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import SaveIcon from '@material-ui/icons/Save';
 
 const useStyles = makeStyles(theme => ({
+    fondo:{
+        width :'100%',
+        background: '#3F51B5',
+
+    },
+
     root: {
-      maxWidth: '50%',
+      maxWidth: '120%',
       flexGrow: 1,
       marginTop: '20px',
-      margin:400,
-      backgroundColor: '#F9F9F6',
+      margin:200,
+      backgroundColor: '#3F51B5',
+      marginLeft: 20,
+      
     },
 
     container:{
-        width: '70%',
+        width: '120%',
         
     },
     Grid:{
-        marginLeft:'50%',
+        marginLeft:'40%',
     },
     paper: {
         padding: theme.spacing(2),
-        textAlign: 'center',
+        textAlign: 'left',
         color: 'white',
-        fontSize: '18px;',
-        background: 'linear-gradient(to left, #085078, #85D8CE)',
-        border: '1px solid black',
-        margin: 5,
+        fontSize: '25px;',
+        background: '#3F51B5',
+        border: '1px solid white',
+        margin: 2,
+        maxWidth: '90%',
       },
+    
 }
 ))
 
@@ -71,32 +86,39 @@ const registro = (props) => {
     return(
     <>
         <Header/>
-        <div className ={classes.root}> 
-            <Grid container>
+        <div className = {classes.fondo}>
+            <div className ={classes.root}> 
+                <Grid container>
                 <Grid xs={12}>
                 <Paper className={classes.paper}>
-                    <h1>Categoria</h1>
-                    <input
+                    <TextField id="standard-basic" label="Categoría"
+                        color = "white"
                         placeholder='Categoria'
                         onChange={eventoCambiarCategoria}
                         value={categoria}
+                        
                     />
                 </Paper>
                 </Grid>
-                {/* <Grid xs={12}>
+                    <Grid xs={12}>
                     <Paper className={classes.paper}> 
-                    <h1>Imagen</h1>
-                    <input type="file"
-                        placeholder='Imagen'
-                        onChange={eventoCambiarImagen}
-                        value={imagen}
-                    />
-                    </Paper>
-                    </Grid> */}
+                        <input
+                            accept="image/*"
+                            className={classes.input}
+                            id="contained-button-file"
+                            multiple
+                            type="file"
+                        />
+                            <label htmlFor="contained-button-file"> 
+                            <Button variant="contained" color="primary" component="span">
+                            Upload
+                            </Button>
+                            </label>
+                        </Paper> 
+                    </Grid> 
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
-                        <h1>Precio</h1>
-                        <input
+                        <TextField id="standard-basic" label="Precio"
                             placeholder='Precio'
                             onChange={eventoCambiarPrecio}
                             value={precio}
@@ -105,8 +127,7 @@ const registro = (props) => {
                     </Grid>
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
-                        <h1>Propietario</h1>
-                        <input
+                        <TextField id="standard-basic" label="Propietario"
                             placeholder='Propietario'
                             onChange={eventoCambiarPropietario}
                             value={propietario}
@@ -115,8 +136,7 @@ const registro = (props) => {
                     </Grid>
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
-                        <h1>Título</h1>
-                        <input
+                        <TextField id="standard-basic" label="Título" 
                             placeholder='Título'
                             onChange={eventoCambiarTitulo}
                             value={titulo}
@@ -125,8 +145,7 @@ const registro = (props) => {
                     </Grid>
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
-                        <h1>Ubicacion</h1>
-                        <input
+                        <TextField id="standard-basic" label="Ubicación" 
                             placeholder='Ubicacion'
                             onChange={eventoCambiarUbicacion}
                             value={ubicacion}
@@ -134,18 +153,25 @@ const registro = (props) => {
                         </Paper>
                     </Grid>
                     <Grid xs={12}>
-                    <button
-                        onClick={eventoGuardar}
-                    >
-                        Guardar
-                    </button>
-                    </Grid>
-            {
-                guardado === true && (<h1>{categoriaResultado}</h1>)
-            }
+                    <Paper className={classes.paper}>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            className={classes.button}
+                            startIcon={<SaveIcon />}
+                        >
+                        Registrar
+                        </Button>
+                    </Paper>
+                </Grid>  
+                    {
+                        guardado === true && (<h1>{categoriaResultado}</h1>)
+                    }
             </Grid>
         </div>
-    </>
-    );
+    </div>
+</>
+);
 };
 export default registro;

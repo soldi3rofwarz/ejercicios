@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
   container:{
       marginLeft: 20,
       width: '100%',
+  },
+  a:{
+    background:'transparent',
   }
 }));
 
@@ -92,7 +95,7 @@ const classes = useStyles();
             >
                 <img className={classes.img} src={imagen} />
             </AutoPlaySwipeableViews>
-            <MobileStepper
+            <MobileStepper className={classes.a}
                 steps={maxSteps}
                 position="static"
                 variant="text"

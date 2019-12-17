@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 2,
     overflow : 'hidden',
     height: '430px',
+    marginTop: '20px',
   },
   margin: {
     margin: theme.spacing(1),
@@ -20,7 +21,8 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     color: 'white',
     fontSize: '18px;',
-    background: 'linear-gradient(to left, #085078, #85D8CE)',
+    background:'#3F51B5',
+    //background: 'linear-gradient(to top,#00203F, #3F51B5)',
   },
 }));
 //boton
@@ -28,13 +30,13 @@ const BootstrapButton = withStyles({
   root: {
     boxShadow: 'none',
     textTransform: 'none',
-    fontSize: 16,
+    fontSize: 22,
     left: '40%',
     padding: '6px 12px',
     border: '1px solid',
     lineHeight: 1.5,
-    backgroundColor: '#007bff',
-    borderColor: '#007bff',
+    backgroundColor: '#E6E4D5',
+    borderColor: 'blue',
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',

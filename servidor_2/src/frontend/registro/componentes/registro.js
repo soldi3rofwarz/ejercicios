@@ -44,6 +44,8 @@ const useStyles = makeStyles(theme => ({
 }
 ))
 
+  
+
 const registro = (props) => {
     
     const classes = useStyles();
@@ -82,8 +84,8 @@ const registro = (props) => {
     <>
         <Header/>
         <div className = {classes.fondo}>
-        <div className ={classes.root}> 
-            <Grid container>
+            <div className ={classes.root}> 
+                <Grid container>
                 <Grid xs={12}>
                 <Paper className={classes.paper}>
                     <TextField id="standard-basic" label="Categoría" 
@@ -93,7 +95,7 @@ const registro = (props) => {
                     />
                 </Paper>
                 </Grid>
-                <Grid xs={12}>
+                {/* <Grid xs={12}>
                     <Paper className={classes.paper}> 
                         <input
                             accept="image/*"
@@ -107,8 +109,8 @@ const registro = (props) => {
                             Upload
                             </Button>
                         {/* </label> */}
-                    </Paper>
-                    </Grid>
+                    {/* </Paper> */}
+                    </Grid> */}
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
                         <TextField id="standard-basic" label="Precio"

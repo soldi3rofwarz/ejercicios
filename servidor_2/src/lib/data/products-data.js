@@ -55,3 +55,6 @@ export const seleccionarProducto = async (productoId) => {
     export const eliminarProducto = async (productoId) => {
         await db.collection(CLAVE_PRODUCTO).doc(productoId).delete();
     }
+
+
+    

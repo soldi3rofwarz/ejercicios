@@ -86,11 +86,11 @@ const VerProducto = (props) => {
               </Grid>
 
               <Grid item xs={6}>
-                <Paper className={classes.paper}>Precios:{precio}</Paper>
+                <Paper className={classes.paper}>Precio:{precio}</Paper>
               </Grid>
 
               <Grid item xs={6}>
-                <Paper className={classes.paper}>Dueño: {propietario}</Paper>
+                <Paper className={classes.paper}>Dueños: {propietario}</Paper>
               </Grid>
 
               <Grid item xs={6}>

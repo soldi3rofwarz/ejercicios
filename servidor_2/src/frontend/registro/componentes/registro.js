@@ -17,30 +17,33 @@ const useStyles = makeStyles(theme => ({
     },
 
     root: {
-      maxWidth: '50%',
+      maxWidth: '120%',
       flexGrow: 1,
       marginTop: '20px',
       margin:200,
       backgroundColor: '#3F51B5',
+      marginLeft: 20,
       
     },
 
     container:{
-        width: '70%',
+        width: '120%',
         
     },
     Grid:{
-        marginLeft:'50%',
+        marginLeft:'40%',
     },
     paper: {
         padding: theme.spacing(2),
-        textAlign: 'center',
+        textAlign: 'left',
         color: 'white',
         fontSize: '25px;',
         background: '#3F51B5',
-        // border: '1px solid black',
+        border: '1px solid white',
         margin: 2,
+        maxWidth: '90%',
       },
+    
 }
 ))
 
@@ -88,14 +91,16 @@ const registro = (props) => {
                 <Grid container>
                 <Grid xs={12}>
                 <Paper className={classes.paper}>
-                    <TextField id="standard-basic" label="Categoría" 
+                    <TextField id="standard-basic" label="Categoría"
+                        color = "white"
                         placeholder='Categoria'
                         onChange={eventoCambiarCategoria}
                         value={categoria}
+                        
                     />
                 </Paper>
                 </Grid>
-                {/* <Grid xs={12}>
+                    <Grid xs={12}>
                     <Paper className={classes.paper}> 
                         <input
                             accept="image/*"
@@ -104,13 +109,13 @@ const registro = (props) => {
                             multiple
                             type="file"
                         />
-                        {/* <label htmlFor="contained-button-file"> */}
+                            <label htmlFor="contained-button-file"> 
                             <Button variant="contained" color="primary" component="span">
                             Upload
                             </Button>
-                        {/* </label> */}
-                    {/* </Paper> */}
-                    </Grid> */}
+                            </label>
+                        </Paper> 
+                    </Grid> 
                     <Grid xs={12}>
                         <Paper className={classes.paper}>
                         <TextField id="standard-basic" label="Precio"
@@ -159,15 +164,14 @@ const registro = (props) => {
                         Registrar
                         </Button>
                     </Paper>
-                   
-                        {
-                            guardado === true && (<h1>{categoriaResultado}</h1>)
-                        }
-                    
-                </Grid>      
+                </Grid>  
+                    {
+                        guardado === true && (<h1>{categoriaResultado}</h1>)
+                    }
+            </Grid>
         </div>
     </div>
-    </>
-    );
+</>
+);
 };
 export default registro;

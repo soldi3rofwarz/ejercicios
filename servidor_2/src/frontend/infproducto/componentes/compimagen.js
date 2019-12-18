@@ -20,8 +20,9 @@ const useStyles = makeStyles(theme => ({
     width: '120%',
     height:350,
     flexGrow: 1,
-    marginTop: '20px',
     backgroundColor: '#E6E4D5',
+    paddingTop:'100px',
+    paddingBottom:'100px',
     
   },
   header:{
@@ -45,6 +46,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 500,
     overflow: 'hidden',
     width: '100%',
+    marginLeft:'100px',
     
   },
   container:{

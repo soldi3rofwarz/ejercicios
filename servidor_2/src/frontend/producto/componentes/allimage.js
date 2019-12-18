@@ -75,10 +75,8 @@ const Allimage = (props) =>{
                 </Grid>
                 </Grid>
                 <Grid item>
-                <Typography>
-                    
-                </Typography>
-                </Grid>
+                <Typography variant="subtitle1">{dato.titulo}</Typography>
+            </Grid>
             </Grid>
             </Grid>
         </Paper>

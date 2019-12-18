@@ -16,6 +16,8 @@ const useStyles = makeStyles(
             background: '#20232a',
             height:'auto',
             color:'white',
+            paddingTop:'30px',
+            paddingBottom:'30px',
         },
     })
 );
@@ -30,12 +32,7 @@ const Pie = () => {
                 <p>
                     Teléfono: +(505) 8520-2508 | Email: info@bienesraices.com
                 </p>
-                <p>
-                    Dirección: Gasolinera PUMA, 800 metros al oeste, 1 km al norte, Juigalpa, Chontales
-                </p>
-                <p>
-                    Copyright © 2019 
-                </p>
+                
                 <a href="https://facebook.com/">
                     <img
                         src={fb} width='67px'
@@ -51,6 +48,13 @@ const Pie = () => {
                         src={ig} width='60px'
                     />
                 </a>
+
+                <p>
+                    Estamos ubicados de Gasolinera PUMA, 800 metros al oeste, 1 km al norte, Juigalpa, Chontales
+                </p>
+                <p>
+                    Copyright © 2019 
+                </p>
             </div>
         </footer>
     );

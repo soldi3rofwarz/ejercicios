@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 
 const Product = (props) => {
 
-    const {cambiarCategoria, datos}=props;
+    const {cambiarCategoria,cambiarTitulo,verTodos, datos}=props;
 
     return (
         <Tema>
@@ -20,7 +20,11 @@ const Product = (props) => {
                     xs={12}
                     sm={12}
                 >
-                    <SectionApp cambiarCategoria={cambiarCategoria}/>
+                    <SectionApp cambiarCategoria={cambiarCategoria}
+                                cambiarTitulo={cambiarTitulo}
+                                verTodos={verTodos}
+
+                    />
                 </Grid>
 
             </Grid>

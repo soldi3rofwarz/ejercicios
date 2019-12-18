@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Products from '../componentes/products';
-import {obtenerProductos, obtenerProductosCat} from '../../../lib/data/products-data';
+import {obtenerProductos, obtenerProductosCat, obtenerProductosTit} from '../../../lib/data/products-data';
 
 class ProductsContent extends Component {
 
@@ -31,6 +31,40 @@ class ProductsContent extends Component {
         }
     }
 
+    cambiarTitulo = async (titulo) =>{
+
+        console.log("funcion")
+        try{
+            const oferts = await  obtenerProductosTit(titulo);
+            console.log('titulo',oferts);
+            this.setState({
+                datainf: oferts,
+            });
+        }
+        catch(e) {
+            console.log("no cargo", e);
+        }
+    }
+
+    vertodos = async () =>{
+
+        console.log("funcion")
+        try{
+            const oferts = await  obtenerProductos();
+
+            console.log('esto funciona',oferts);
+
+            console.log("componentDidMount: Cargando datos de firestore");
+            
+            this.setState({
+                datainf: oferts,
+            });
+        }
+        catch(e) {
+            console.log("no cargo", e);
+        }
+    }
+
     
     render() {
 
@@ -38,7 +72,10 @@ class ProductsContent extends Component {
 
         return (
             <Products
-                cambiarCategoria={this.cambiarCategoria} datos={datainf}
+                cambiarCategoria={this.cambiarCategoria} 
+                cambiarTitulo={this.cambiarTitulo}
+                vertodos={this.vertodos} 
+                datos={datainf}
             />
         );
 

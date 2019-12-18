@@ -29,6 +29,21 @@ export const obtenerProductosCat = async (ValorCategoria) => {
     return producto;
 }
 
+export const obtenerProductosTit = async (ValorTitulo) => {
+    const querySnapShot = await db.collection(CLAVE_PRODUCTO).get();
+    const producto = [];
+    querySnapShot.forEach((documento)=> {
+        if(documento.data().titulo===ValorTitulo){
+            producto.push({
+                id: documento.id,
+                ...documento.data(),
+
+            });
+        };
+    });
+    return producto;
+}
+
 export const seleccionarProducto = async (productoId) => {
     const querySnapshot = await db.collection(CLAVE_PRODUCTO).doc(productoId).get();
     let producto = {};
@@ -40,7 +55,7 @@ export const seleccionarProducto = async (productoId) => {
     return producto;
 }
 
-    export const guardarProducto = async (producto) => {
+    export const registrarProducto = async (producto) => {
         await db.collection(CLAVE_PRODUCTO).add(
             producto
         );

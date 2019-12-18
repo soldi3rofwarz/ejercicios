@@ -35,8 +35,6 @@ const BootstrapButton = withStyles({
     padding: '6px 12px',
     border: '1px solid',
     lineHeight: 1.5,
-    backgroundColor: '#E6E4D5',
-    borderColor: 'blue',
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -82,7 +80,7 @@ const VerProducto = (props) => {
           <div className={classes.root}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <Paper className={classes.paper}>{categoria}</Paper>
+                <Paper className={classes.paper}>En {categoria}</Paper>
               </Grid>
 
               <Grid item xs={6}>
@@ -101,7 +99,7 @@ const VerProducto = (props) => {
                 <Paper className={classes.paper}>Tipo: {titulo}</Paper>
               </Grid>
 
-              <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
+              <BootstrapButton variant="contained" color="secondary" disableRipple className={classes.margin}>
               Reservar
             </BootstrapButton>
             </Grid>

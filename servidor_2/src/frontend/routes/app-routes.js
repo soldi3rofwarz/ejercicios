@@ -12,9 +12,6 @@ import Productos from './../Inicio/contenedor/Products-Content';
 import Compimg from './../infproducto/contenedor/image-container';
 import registro from './../registro/registro-contenedor/registro-cont';
 
-//importar las rutas de las vista que se podran cargar desde el servidor//
-//luego se deben agregar las rutas ne la parte de route//
-
 const AppRoutes = () => {
 
     return (

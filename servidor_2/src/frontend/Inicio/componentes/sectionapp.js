@@ -33,17 +33,19 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '20px',
         marginTop: '20px',
         marginBottom: '20px',
-        color: '#828282',
-        backgroundColor: '#f5f5f5',
+        color: 'black',
+        backgroundColor: 'grey',
         borderColor: '#e0dcde',
-        padding: '15px',
+        padding: '20px',
         borderRadius: '7px',
+        fontWeight:600,
+        fontSize:'20px',
     },
 }));
 
 const BackImg = (props) => {
 
- const {cambiarCategoria}=props;
+ const {cambiarCategoria, cambiarTitulo, verTodos}=props;
     const classes = useStyles();
 
     return (
@@ -64,20 +66,28 @@ const BackImg = (props) => {
                 <div
                     className={classes.contenedorDatos}
                 >
-                    <div onClick= { ()=> cambiarCategoria ("Ventas")} >
-                        <b>Ventas</b>
+                    <div onClick= { ()=> verTodos ()} className={classes.datos}>
+                        Todo
+                    </div>
+
+                    <div onClick= { ()=> cambiarCategoria ("Venta")} className={classes.datos}>
+                        Ventas
                     </div>
 
                     <div onClick= { ()=> cambiarCategoria ("Alquiler")} className={classes.datos}>
-                        <b>Alquileres</b>
+                        Alquileres
                     </div>
 
-                    <div className={classes.datos}>
-                        <b>Departamentos</b>
+                    <div onClick= { ()=> cambiarTitulo ("Departamento")} className={classes.datos}>
+                        Departamentos
                     </div>
 
-                    <div className={classes.datos}>
-                        <b>Proyectos nuevos</b> 
+                    <div onClick= { ()=> cambiarTitulo ("Casa")} className={classes.datos}>
+                        Casas
+                    </div>
+
+                    <div onClick= { ()=> cambiarTitulo ("Oficina")} className={classes.datos}>
+                        oficinas
                     </div>
 
                 </div>

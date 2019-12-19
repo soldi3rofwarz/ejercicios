@@ -72,12 +72,12 @@ class RegitroUserContent extends Component {
 
     }
 
-    handleChangeEmail = (event) => this.setState({ email: event.target.value });
-    handleChangePhone = (event) => this.setState({ phone: event.target.value });
-    handleChangePassword = (event) => this.setState({ password: event.target.value });
-    handleChangeConfirm = (event) => this.setState({ confirm: event.target.value });
+    eventoChangeEmail = (event) => this.setState({ email: event.target.value });
+    eventoChangePhone = (event) => this.setState({ phone: event.target.value });
+    eventoChangePassword = (event) => this.setState({ password: event.target.value });
+    eventoChangeConfirm = (event) => this.setState({ confirm: event.target.value });
 
-    handleRegister = () => {
+    eventoRegistrarse = () => {
         const validating = this.validate();
         if(validating) {
             const {
@@ -160,7 +160,7 @@ class RegitroUserContent extends Component {
                 errorEmail = 'E-mail inválido';
                 break;
             case 'auth/email-already-in-use':
-                errorEmail = 'Ya existe un usuario con este e-mail';
+                errorEmail = 'Otro usuario ya tiene una cuenta con este correo';
                 break;
             case 'auth/weak-password':
                 errorPassword = 'Contraseña inválida. Debe tener al menos 6 caracteres';

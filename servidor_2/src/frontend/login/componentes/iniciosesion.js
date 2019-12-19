@@ -7,15 +7,16 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import './login.css';
 
-import Snackbar from './../../theme/components/snackbar';
+import Snackbar from './../../tema/componentes/snackbar';
 import WarningIcon from '@material-ui/icons/Warning';
 
 const useStyles = makeStyles((theme) => ({
     container: {
         display: 'flex',
         flex: 1,
-        background: '#02a8a8',
+        background: 'linear-gradient(45deg, #f44336 20%, #e91e63 90%)',
         minWidth: '100%',
         minHeight: '100vh',
         justifyContent: 'center',
@@ -45,36 +46,28 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Registrouser = (props) => {
+const Iniciarsesion = (props) => {
 
     const classes = useStyles();
 
     const {
         email,
         onChangeEmail,
-        phone,
-        onChangePhone,
         password,
         onChangePassword,
-        confirm,
-        onChangeConfirm,
+        onSignin,
         estado,
-
-        onRegister,
-
         errorGeneral,
         errorEmail,
-        errorPhone,
         errorPassword,
-        errorConfirm,
         messageClose,
     } = props;
 
-    return (
+    return(
         <div
             className={classes.container}
         >
-            {/* {errorGeneral && (
+            {errorGeneral && (
                 <Snackbar
                     open={errorGeneral ? true : false}
                     messageClose={messageClose}
@@ -82,12 +75,12 @@ const Registrouser = (props) => {
                     icon={<WarningIcon />}
                     className={classes.error}
                 />
-            )} */}
+            )}
             <Paper
                 className={classes.containerForm}
                 elevation={5}
             >
-                <h1>Registrarse</h1>
+                <h1>Iniciar Sesión</h1>
                 <Grid
                     container
                 >
@@ -97,14 +90,14 @@ const Registrouser = (props) => {
                     >
                         <TextField
                             className={classes.textField}
-                            label='E-mail'
+                            label="E-mail"
                             margin="normal"
                             variant="outlined"
                             value={email}
                             onChange={onChangeEmail}
                             disabled={estado === 'cargando' ? true : false}
-                            error={errorEmail ? true : false}
-                            helperText={errorEmail}
+                            error={ errorEmail ? true : false }
+                            helperText={ errorEmail }
                         />
                     </Grid>
                     <Grid
@@ -113,48 +106,15 @@ const Registrouser = (props) => {
                     >
                         <TextField
                             className={classes.textField}
-                            label="Teléfono"
-                            margin="normal"
-                            variant="outlined"
-                            value={phone}
-                            onChange={onChangePhone}
-                            disabled={estado === 'cargando' ? true : false}
-                            error={errorPhone ? true : false}
-                            helperText={errorPhone}
-                        />
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                    >
-                        <TextField
-                            className={classes.textField}
+                            type='password'
                             label="Contraseña"
                             margin="normal"
                             variant="outlined"
                             value={password}
                             onChange={onChangePassword}
-                            type="password"
                             disabled={estado === 'cargando' ? true : false}
-                            error={errorPassword ? true : false}
-                            helperText={errorPassword}
-                        />
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                    >
-                        <TextField
-                            className={classes.textField}
-                            label='Confirmar contraseña'
-                            margin='normal'
-                            variant='outlined'
-                            value={confirm}
-                            onChange={onChangeConfirm}
-                            type='password'
-                            disabled={estado === 'cargando' ? true : false}
-                            error={errorConfirm ? true : false}
-                            helperText={errorConfirm}
+                            error={ errorPassword ? true : false }
+                            helperText={ errorPassword }
                         />
                     </Grid>
                     <Grid
@@ -168,19 +128,19 @@ const Registrouser = (props) => {
                                 variant="contained"
                                 color="secondary"
                                 size="large"
-                                onClick={onRegister}
-                                disabled={estado === 'cargando' ? true : false}                                
+                                onClick={onSignin}
+                                disabled={estado === 'cargando' ? true : false}
                             >
-                                Registrarme
+                                Entrar
                             </Button>
                             <Button
                                 variant="outlined"
                                 color="secondary"
                                 size="large"
                                 component={Link}
-                                to='/login'
+                                to='/register'
                             >
-                                Entrar
+                                Crear Cuenta
                             </Button>
                         </div>
                     </Grid>
@@ -191,4 +151,4 @@ const Registrouser = (props) => {
 
 };
 
-export default Registrouser;
+export default Iniciarsesion;

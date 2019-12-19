@@ -90,6 +90,10 @@ const BackImg = (props) => {
                         oficinas
                     </div>
 
+                    <div onClick= { ()=> cambiarTitulo ("Terreno")} className={classes.datos}>
+                        Terrenos
+                    </div>
+
                 </div>
             </div>
         </div>

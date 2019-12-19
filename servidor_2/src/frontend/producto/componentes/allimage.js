@@ -14,13 +14,13 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing.unit * (2),
     margin: 'auto',
-    maxWidth: 400,
+    maxWidth: 500,
     marginBottom:'35px',
     background:'#f4f4f4',
   },
   image: {
     width: 128,
-    height: 200,
+    height: 150,
   },
   img: {
     margin: 'auto',
@@ -51,7 +51,7 @@ const Allimage = (props) =>{
     return (
         <div className={classes.root}>
         <Paper className={classes.paper}>
-            <Grid container spacing={4}>
+            <Grid container spacing={2}>
             <Grid item>
                 <ButtonBase className={classes.image}>
                 <img className={classes.img} alt="complex" src={dato.imagen} />
